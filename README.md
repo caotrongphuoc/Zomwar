@@ -1,6 +1,6 @@
 ## AK Embedded Base Kit - STM32L151 - Lập trình nhúng vi điều khiển
 
-[<img src="hardware/images/ak-embedded-software-logo.jpg" width="240"/>](https://github.com/epcbtech)
+[<img src="hardware/images/ak-embedded-software-logo.jpg" width="240"/>](https://github.com/ak-embedded-software)
 
 Heartfelt thanks to [EPCB](https://epcb.vn/pages/frontpage) for standing with the AK Foundation and empowering our mission.
 
@@ -11,11 +11,11 @@ AK Embedded Base Kit is an evaluation kit for advanced embedded software learner
 [<img src="hardware/images/ak-embedded-base-kit-stm32l151-lap-trinh-nhung-vi-dieu-khien.jpg" width="480"/>](https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu)
 
 ### Memory map
-- [ 0x08000000 ] : **Boot** [[ak-base-kit-stm32l151-boot.bin]](https://github.com/epcbtech/ak-base-kit-stm32l151/blob/main/hardware/bin/ak-base-kit-stm32l151-boot.bin)
+- [ 0x08000000 ] : **Boot** [[ak-base-kit-stm32l151-boot.bin]](https://github.com/ak-embedded-software/ak-base-kit-stm32l151/blob/main/hardware/bin/ak-base-kit-stm32l151-boot.bin)
 - [ 0x08002000 ] : **BSF** [ Memory for data sharing between Boot and Application ]
-- [ 0x08003000 ] : **Application** [[ak-base-kit-stm32l151-application.bin]](https://github.com/epcbtech/ak-base-kit-stm32l151/blob/main/hardware/bin/ak-base-kit-stm32l151-application.bin)
+- [ 0x08003000 ] : **Application** [[ak-base-kit-stm32l151-application.bin]](https://github.com/ak-embedded-software/ak-base-kit-stm32l151/blob/main/hardware/bin/ak-base-kit-stm32l151-application.bin)
 
-**Note:** After loading boot & application firmware, you can use [AK - Flash](https://github.com/epcbtech/ak-flash) to load the application directly through the **USB** port on the KIT
+**Note:** After loading boot & application firmware, you can use [AK - Flash](https://github.com/ak-embedded-software/ak-flash) to load the application directly through the **USB** port on the KIT
 ```sh
 ak_flash /dev/ttyUSB0 ak-base-kit-stm32l151-application.bin 0x08003000
 ```
