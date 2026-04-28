@@ -1,7 +1,5 @@
 # AK-Base-Kit STM32L151 — Hướng Dẫn Bắt Đầu Lập Trình Game
 
-> Bộ source code nền tảng (Base Kit) giúp bạn nhanh chóng phát triển game trên vi điều khiển **STM32L151**.
-
 Chào mừng bạn đến với dự án phát triển Game trên vi điều khiển STM32L151! Repository này cung cấp bộ source code nền tảng cùng tài liệu hướng dẫn chi tiết, giúp bạn nhanh chóng làm quen với kiến trúc hệ thống và bắt tay vào lập trình tựa game của riêng mình.
 
 ---
