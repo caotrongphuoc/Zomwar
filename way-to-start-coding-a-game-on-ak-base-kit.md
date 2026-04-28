@@ -114,7 +114,7 @@ Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu l
 **Bước 3.1 —** Tạo file header trong thư mục `screens/`:
 
 <p align="center">
-  <img width="800" alt="Tạo file header" src="https://github.com/user-attachments/assets/aa019658-4519-4cdd-a12e-900bf925133a" />
+  <img width="914" height="522" alt="image" src="https://github.com/user-attachments/assets/6c4bce54-c978-46f9-99f6-dd0c5a608e7c" />
 </p>
 
 **Bước 3.2 —** Tạo file lưu trữ và xử lý dữ liệu bitmap cho màn hình hiển thị:
