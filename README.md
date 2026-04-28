@@ -58,7 +58,7 @@ Vui lòng làm theo hướng dẫn chi tiết tại đây:
 
 ---
 
-## III. Quy trình lập trình game hằng ngày
+## III. Quy trình lập trình game
 
 > **Quan trọng:** Vì đây là dự án phần mềm nhúng, hãy sử dụng **Terminal trên môi trường Ubuntu/Linux** để đảm bảo tính chính xác.
 
