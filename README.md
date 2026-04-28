@@ -62,7 +62,7 @@ Vui lòng làm theo hướng dẫn chi tiết tại đây:
 
 > **Quan trọng:** Vì đây là dự án phần mềm nhúng, hãy sử dụng **Terminal trên môi trường Ubuntu/Linux** để đảm bảo tính chính xác.
 
-### Bước 0: Tạo thư mục làm việc
+### Bước 1: Tạo thư mục làm việc
 
 Từ thư mục `Home`, tạo một thư mục **Workspace** — đây là nơi chứa toàn bộ source code và công cụ lập trình.
 
@@ -83,7 +83,7 @@ Bên trong `Workspace`, tạo 2 thư mục con:
 
 ---
 
-### Bước 1: Clone repo về máy
+### Bước 2: Clone repo về máy
 
 > *Bước này chỉ thực hiện **một lần duy nhất** khi bắt đầu dự án.*
 
@@ -99,7 +99,7 @@ git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 
 ---
 
-### Bước 2: Modify Game
+### Bước 3: Modify Game
 
 Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu lập trình.
 
@@ -111,31 +111,31 @@ Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu l
 
 #### Ví dụ: Cập nhật logo AK Foundation
 
-**Bước 2.1 —** Tạo file header trong thư mục `screens/`:
+**Bước 3.1 —** Tạo file header trong thư mục `screens/`:
 
 <p align="center">
   <img width="800" alt="Tạo file header" src="https://github.com/user-attachments/assets/aa019658-4519-4cdd-a12e-900bf925133a" />
 </p>
 
-**Bước 2.2 —** Tạo file lưu trữ và xử lý dữ liệu bitmap cho màn hình hiển thị:
+**Bước 3.2 —** Tạo file lưu trữ và xử lý dữ liệu bitmap cho màn hình hiển thị:
 
 <p align="center">
   <img width="900" alt="Tạo file bitmap" src="https://github.com/user-attachments/assets/04768ea3-f7d9-44ba-b0cd-b00853e706cc" />
 </p>
 
-**Bước 2.3 —** Include file header vào `scr_startup.h`:
+**Bước 3.3 —** Include file header vào `scr_startup.h`:
 
 <p align="center">
   <img width="800" alt="Include header" src="https://github.com/user-attachments/assets/f15b90a6-9d31-4b5b-aaee-93a6644003b7" />
 </p>
 
-**Bước 2.4 —** Trong file `scr_startup.cpp`, cập nhật lại hàm `view_scr_startup()`:
+**Bước 3.4 —** Trong file `scr_startup.cpp`, cập nhật lại hàm `view_scr_startup()`:
 
 <p align="center">
   <img width="800" alt="Cập nhật hàm view_scr_startup" src="https://github.com/user-attachments/assets/9d497da1-3adf-4f9c-83bf-7bbdbe6580c0" />
 </p>
 
-**Bước 2.5 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
+**Bước 3.5 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
 
 <p align="center">
   <img width="400" alt="Kết quả trên kit" src="https://github.com/user-attachments/assets/d9032475-3f4c-4f79-8073-ecb10345333f" />
@@ -143,7 +143,7 @@ Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu l
 
 ---
 
-### Bước 3: Push code lên GitHub
+### Bước 4: Push code lên GitHub
 
 Sau khi hoàn thành một tính năng, lưu lại tiến độ lên repo cá nhân bằng các lệnh sau (chạy tại **thư mục gốc** của repo):
 
