@@ -1,6 +1,6 @@
 ## AK Embedded Base Kit - STM32L151 - Lập trình nhúng vi điều khiển
 
-[<img src="hardware/images/ak-embedded-software-logo.jpg" width="240"/>](https://github.com/ak-embedded-software)
+[<img src="hardware/images/ak-foundation-logo.png" width="240"/>](https://github.com/the-ak-foundation)
 
 Heartfelt thanks to [EPCB](https://epcb.vn/pages/frontpage) for standing with the AK Foundation and empowering our mission.
 

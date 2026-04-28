@@ -121,7 +121,10 @@ IF_OPTION +=	$(IF_LINK_OPTION)		\
 TASK_OPTION +=	$(TASK_ZIGBEE_OPTION)
 TASK_OPTION +=	$(TASK_MBMASTER_OPTION)
 
-# Hardware option (SH1106 (V2.1), SSD1309 (V3.0))
+# Hardware option
+#Ver 2.1 (Oled 1.3" driver SH1106)
+#Ver 3.0 (Oled 1.54" driver SSD1309)
+
 HARDWARE_OPTION += \
 		-DSSD1309_DRIVER_EN	\
 		-USH1106_DRIVER_EN
