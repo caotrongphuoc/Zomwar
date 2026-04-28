@@ -90,7 +90,7 @@ Bên trong `Workspace`, tạo 2 thư mục con:
 Mở **Terminal** trong thư mục `Sources` và chạy lệnh sau (nhớ thay bằng link repo của bạn):
 
 ```bash
-git clone https://github.com/<ten-cua-ban>/<ten-repo-da-fork>.git
+git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 ```
 
 <p align="center">
@@ -149,7 +149,7 @@ Sau khi hoàn thành một tính năng, lưu lại tiến độ lên repo cá nh
 
 ```bash
 git add .
-git commit -m "Tính năng: Cập nhật logo AK Foundation"
+git commit -m "Update logo AK Foundation"
 git push origin main
 ```
 
@@ -168,12 +168,6 @@ git push origin main
 > Sau bước này, mọi người có thể truy cập trực tiếp vào link GitHub của bạn để xem tiến độ và trải nghiệm game bạn đã viết.
 
 ---
-
-## Đóng góp
-
-Nếu bạn gặp vấn đề hoặc có đề xuất cải tiến, hãy:
-- Tạo **Issue** để báo cáo lỗi hoặc đề xuất tính năng mới
-- Gửi **Pull Request** để đóng góp code
 
 ## Liên hệ & Hỗ trợ
 
