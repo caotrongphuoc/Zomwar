@@ -17,6 +17,8 @@
 
 #include "buzzer.h"
 
+#include "screens_bitmap.h"
+
 extern view_dynamic_t dyn_view_startup;
 
 extern view_screen_t scr_startup;

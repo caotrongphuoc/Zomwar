@@ -138,7 +138,7 @@ void scr_es35sw_th_sensor_handle(ak_msg_t* msg) {
 	case AC_DISPLAY_BUTON_MODE_RELEASED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTON_MODE_RELEASED\n");
 		timer_remove_attr(AC_TASK_DISPLAY_ID, AC_DISPLAY_SHOW_MODBUS_PULL_UPDATE);
-		SCREEN_TRAN(scr_idle_handle, &scr_idle);
+		SCREEN_TRAN(scr_peashooter_handle, &scr_peashooter);
 	}
 		break;
 

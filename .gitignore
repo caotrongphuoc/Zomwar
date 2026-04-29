@@ -1,0 +1,29 @@
+# Build output
+application/build_*/
+**/build_*/
+**/build/
+
+# Object files
+*.o
+*.obj
+
+# Dependency files
+*.d
+
+# Compiled binaries
+*.axf
+*.bin
+*.elf
+*.hex
+*.map
+*.out
+*.su
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

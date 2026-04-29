@@ -13,8 +13,8 @@ Print = @echo "~"
 NAME_MODULE = ak-base-kit-stm32l151-application
 PROJECT = $(NAME_MODULE)
 
-GCC_PATH		= $(HOME)/workspace/tools/gcc-arm-none-eabi-10.3-2021.10
-PROGRAMER_PATH		= $(HOME)/workspace/tools/STM32CubeProgrammer/bin
+GCC_PATH			= /home/ctp/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10
+PROGRAMER_PATH		= /home/ctp/Workspace/Tools/STM32CubeProgrammer/bin
 OPENOCD_CFG_PATH	= /usr/local/share/openocd/scripts/board/stm32ldiscovery.cfg
 
 # App start address, that need sync with declare in linker file and interrupt vector table.
@@ -126,8 +126,8 @@ TASK_OPTION +=	$(TASK_MBMASTER_OPTION)
 #Ver 3.0 (Oled 1.54" driver SSD1309)
 
 HARDWARE_OPTION += \
-		-DSSD1309_DRIVER_EN	\
-		-USH1106_DRIVER_EN
+		-USSD1309_DRIVER_EN	\
+		-DSH1106_DRIVER_EN
 
 # Console log compile option
 CONSOLE_OPTION +=			\

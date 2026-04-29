@@ -10,3 +10,7 @@ SOURCES_CPP += sources/app/screens/scr_info.cpp
 SOURCES_CPP += sources/app/screens/scr_lhio404_io_device.cpp
 SOURCES_CPP += sources/app/screens/scr_noen.cpp
 SOURCES_CPP += sources/app/screens/scr_startup.cpp
+SOURCES_CPP += sources/app/screens/scr_peashooter.cpp
+SOURCES_CPP += sources/app/screens/screens_bitmap.cpp
+
+
