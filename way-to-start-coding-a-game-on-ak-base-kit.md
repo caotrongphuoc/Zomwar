@@ -163,7 +163,8 @@ Toàn bộ logic game được viết trong thư mục `application/`.
 **Bước 3.8 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-quick-start-guide-setup-môi-trường)):
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/513e18e3-4141-418a-a290-2bc45f97b54e" alt="Build và nạp firmware" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="b902eed233d5b28bebc4" src="https://github.com/user-attachments/assets/f3d4ab4c-7437-4ef5-8cca-6fc61ea7c2c6" />
+
 </p>
 
 ---
