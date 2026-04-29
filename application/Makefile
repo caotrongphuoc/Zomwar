@@ -9,7 +9,7 @@
 # Utilitis define
 Print = @echo "~"
 
-# Name of build target ex: ak-base-kit-stm32l151-application.bin
+# Name of build target ex: Zomwar-application.bin
 NAME_MODULE = Zomwar-application
 PROJECT = $(NAME_MODULE)
 
