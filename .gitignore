@@ -3,6 +3,9 @@ application/build_*/
 **/build_*/
 **/build/
 
+!application/build_*/*.bin
+!**/build_*/*.bin
+
 # Object files
 *.o
 *.obj
@@ -12,7 +15,6 @@ application/build_*/
 
 # Compiled binaries
 *.axf
-*.bin
 *.elf
 *.hex
 *.map
