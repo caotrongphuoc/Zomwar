@@ -30,13 +30,13 @@ Nhấn nút **Fork** ở góc trên bên phải để tạo một bản sao dự
 Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **Fork** để ủng hộ tác giả nhé.
 
 <p align="center">
-  <img width="900" alt="Fork repository" src="https://github.com/user-attachments/assets/620b1396-a728-46f2-884f-a788533c4d69" />
+  <img src="https://github.com/user-attachments/assets/620b1396-a728-46f2-884f-a788533c4d69" alt="Fork repository" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 ### 3. Tạo bản fork
 
 <p align="center">
-  <img width="900" alt="Create fork" src="https://github.com/user-attachments/assets/378721d5-26c5-4898-b523-7e07594f6583" />
+  <img src="https://github.com/user-attachments/assets/378721d5-26c5-4898-b523-7e07594f6583" alt="Create fork" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 > **Note:**
@@ -46,7 +46,7 @@ Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **F
 Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đây chính là "bộ khung" để bạn phát triển và hoàn thiện game:
 
 <p align="center">
-  <img width="900" alt="Forked repository" src="https://github.com/user-attachments/assets/614fafce-3090-4be0-9880-3c7dc7d6f979" />
+  <img src="https://github.com/user-attachments/assets/614fafce-3090-4be0-9880-3c7dc7d6f979" alt="Forked repository" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 ---
@@ -68,7 +68,7 @@ Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đâ
 Từ thư mục `Home`, tạo một thư mục đặt tên là **Workspace** — đây sẽ là nơi chứa toàn bộ source code và công cụ lập trình.
 
 <p align="center">
-  <img width="900" alt="Tạo thư mục Workspace" src="https://github.com/user-attachments/assets/60eff60e-e2d2-4f8e-9183-c67934ea0a28" />
+  <img src="https://github.com/user-attachments/assets/60eff60e-e2d2-4f8e-9183-c67934ea0a28" alt="Tạo thư mục Workspace" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 Bên trong `Workspace`, tạo thêm 2 thư mục con:
@@ -79,7 +79,7 @@ Bên trong `Workspace`, tạo thêm 2 thư mục con:
 | `Tools`   | Chứa các công cụ lập trình (xem chi tiết tại [phần II](#ii-quick-start-guide-setup-môi-trường)) |
 
 <p align="center">
-  <img width="900" alt="Cấu trúc Workspace" src="https://github.com/user-attachments/assets/b1fa5a0f-ef28-4eba-b823-bec7030117fb" />
+  <img src="https://github.com/user-attachments/assets/b1fa5a0f-ef28-4eba-b823-bec7030117fb" alt="Cấu trúc Workspace" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 ---
@@ -95,7 +95,7 @@ git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 ```
 
 <p align="center">
-  <img width="900" alt="Clone repository" src="https://github.com/user-attachments/assets/6ba6e15d-ce85-483e-9519-61fcb017dafb" />
+  <img src="https://github.com/user-attachments/assets/6ba6e15d-ce85-483e-9519-61fcb017dafb" alt="Clone repository" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 ---
@@ -107,7 +107,7 @@ Mở **VSCode** trên Linux, sau đó mở repository vừa clone để bắt đ
 Toàn bộ logic game được viết trong thư mục `application/`.
 
 <p align="center">
-  <img width="900" alt="Cấu trúc thư mục application" src="https://github.com/user-attachments/assets/3a4ab383-6fac-486b-8f18-67afc3521864" />
+  <img src="https://github.com/user-attachments/assets/3a4ab383-6fac-486b-8f18-67afc3521864" alt="Cấu trúc thư mục application" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 #### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng) trong game Plants vs. Zombies
@@ -115,49 +115,49 @@ Toàn bộ logic game được viết trong thư mục `application/`.
 **Bước 3.1 —** Tạo file header `scr_peashooter.h` trong thư mục `screens/` để khai báo các hàm vẽ màn hình Peashooter:
 
 <p align="center">
-  <img width="900" alt="scr_peashooter.h" src="https://github.com/user-attachments/assets/5c3e469b-468d-4273-aea7-30202b3596af" />
+  <img src="https://github.com/user-attachments/assets/5c3e469b-468d-4273-aea7-30202b3596af" alt="scr_peashooter.h" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Bước 3.2 —** Tạo file `scr_peashooter.cpp` để xử lý dữ liệu bitmap và hiển thị Peashooter lên màn hình:
 
 <p align="center">
-  <img width="900" alt="scr_peashooter.cpp" src="https://github.com/user-attachments/assets/3a496f51-ec9a-4bc1-beb8-35baae534a42" />
+  <img src="https://github.com/user-attachments/assets/3a496f51-ec9a-4bc1-beb8-35baae534a42" alt="scr_peashooter.cpp" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Bước 3.3 —** Tạo file header `screens_bitmap.h` trong thư mục `screens/` để khai báo dữ liệu bitmap dùng chung:
 
 <p align="center">
-  <img width="900" alt="screens_bitmap.h" src="https://github.com/user-attachments/assets/d6ea016c-bfc8-4e0c-bda3-4c15a65fad20" />
+  <img src="https://github.com/user-attachments/assets/d6ea016c-bfc8-4e0c-bda3-4c15a65fad20" alt="screens_bitmap.h" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Bước 3.4 —** Tạo file `screens_bitmap.cpp` chứa dữ liệu bitmap của Peashooter:
 
 <p align="center">
-  <img width="900" alt="screens_bitmap.cpp" src="https://github.com/user-attachments/assets/23ebde81-f3d2-4dfb-87f9-20a2aa3fc5a2" />
+  <img src="https://github.com/user-attachments/assets/23ebde81-f3d2-4dfb-87f9-20a2aa3fc5a2" alt="screens_bitmap.cpp" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Bước 3.5 —** Include file header của Peashooter vào `task_display.h`:
 
 <p align="center">
-  <img width="900" alt="task_display.h" src="https://github.com/user-attachments/assets/7fe8c914-5d52-4e23-afeb-e3d936b25502" />
+  <img src="https://github.com/user-attachments/assets/7fe8c914-5d52-4e23-afeb-e3d936b25502" alt="task_display.h" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Bước 3.6 —** Cập nhật lại case `AC_DISPLAY_BUTTON_MODE_RELEASED`:
 
 <p align="center">
-  <img width="900" alt="AC_DISPLAY_BUTTON_MODE_RELEASED" src="https://github.com/user-attachments/assets/7f491cf1-d9e9-4fcb-bd11-7db6c3f24f43" />
+  <img src="https://github.com/user-attachments/assets/7f491cf1-d9e9-4fcb-bd11-7db6c3f24f43" alt="AC_DISPLAY_BUTTON_MODE_RELEASED" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Bước 3.7 —** Thêm hai file `scr_peashooter.cpp` và `screens_bitmap.cpp` vào `Makefile.mk` trong thư mục `screens/` để biên dịch:
 
 <p align="center">
-  <img width="900" alt="Makefile.mk" src="https://github.com/user-attachments/assets/c96aeceb-d40c-4552-bfd5-03f7cff28283" />
+  <img src="https://github.com/user-attachments/assets/c96aeceb-d40c-4552-bfd5-03f7cff28283" alt="Makefile.mk" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Bước 3.8 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-quick-start-guide-setup-môi-trường)):
 
 <p align="center">
-  <img width="900" alt="Build và nạp firmware" src="https://github.com/user-attachments/assets/513e18e3-4141-418a-a290-2bc45f97b54e" />
+  <img src="https://github.com/user-attachments/assets/513e18e3-4141-418a-a290-2bc45f97b54e" alt="Build và nạp firmware" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 ---
@@ -175,17 +175,17 @@ git push origin main
 **Kết quả sau khi chạy lệnh:**
 
 <p align="center">
-  <img width="900" alt="Kết quả git push" src="https://github.com/user-attachments/assets/b3a51ad7-c300-4749-bcf4-ab5d702d168b" />
+  <img src="https://github.com/user-attachments/assets/b3a51ad7-c300-4749-bcf4-ab5d702d168b" alt="Kết quả git push" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 **Repository đã được cập nhật trên GitHub:**
 
 <p align="center">
-  <img width="900" alt="Repository đã cập nhật" src="https://github.com/user-attachments/assets/fdb79fe0-d4b9-4625-bd3e-ca3216a9a633" />
+  <img src="https://github.com/user-attachments/assets/fdb79fe0-d4b9-4625-bd3e-ca3216a9a633" alt="Repository đã cập nhật" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 <p align="center">
-  <img width="900" alt="Chi tiết repository" src="https://github.com/user-attachments/assets/417de700-df85-42b6-8f61-7816536142af" />
+  <img src="https://github.com/user-attachments/assets/417de700-df85-42b6-8f61-7816536142af" alt="Chi tiết repository" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
 </p>
 
 Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
