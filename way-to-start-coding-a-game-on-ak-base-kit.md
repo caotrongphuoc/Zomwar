@@ -164,7 +164,7 @@ Sau khi hoàn thành một tính năng, lưu lại tiến độ lên repo cá nh
 
 ```bash
 git add .
-git commit -m "Update logo AK Foundation"
+git commit -m "Create screen of Peashooter"
 git push origin main
 ```
 
