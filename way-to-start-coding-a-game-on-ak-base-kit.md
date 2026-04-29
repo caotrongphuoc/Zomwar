@@ -107,7 +107,7 @@ Mở **VSCode** trên Linux, sau đó mở repository vừa clone để bắt đ
 Toàn bộ logic game được viết trong thư mục `application/`.
 
 <p align="center">
-  <img width="900" alt="Cấu trúc thư mục application" src="https://github.com/user-attachments/assets/c403a5a8-80c3-42fc-a96f-499c05c92a73" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/3a4ab383-6fac-486b-8f18-67afc3521864" />
 </p>
 
 #### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng) trong game Plants vs. Zombies
@@ -115,25 +115,25 @@ Toàn bộ logic game được viết trong thư mục `application/`.
 **Bước 3.1 —** Tạo file header `scr_peashooter.h` trong thư mục `screens/` để khai báo các hàm vẽ màn hình Peashooter:
 
 <p align="center">
-  <img width="876" height="569" alt="image" src="https://github.com/user-attachments/assets/aa947653-4c3f-4bb5-93dc-5ad8a2048968" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/5c3e469b-468d-4273-aea7-30202b3596af" />
 </p>
 
 **Bước 3.2 —** Tạo file `scr_peashooter.cpp` để xử lý dữ liệu bitmap và hiển thị Peashooter lên màn hình:
 
 <p align="center">
-  <img width="1274" height="835" alt="image" src="https://github.com/user-attachments/assets/39eda4fc-1f14-4ab8-b3f4-96a2b6893b24" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/3a496f51-ec9a-4bc1-beb8-35baae534a42" />
 </p>
 
 **Bước 3.3 —** Tạo file header `screens_bitmap.h` trong thư mục `screens/` để khai báo dữ liệu bitmap dùng chung:
 
 <p align="center">
-  <img width="845" height="565" alt="image" src="https://github.com/user-attachments/assets/ec495618-9890-4ee6-9835-af274cb504cd" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/d6ea016c-bfc8-4e0c-bda3-4c15a65fad20" />
 </p>
 
 **Bước 3.4 —** Tạo file `screens_bitmap.cpp` chứa dữ liệu bitmap của Peashooter:
 
 <p align="center">
-  <img width="976" height="713" alt="image" src="https://github.com/user-attachments/assets/cd858d8d-046c-4c3e-bf0c-2c84fbd66123" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/23ebde81-f3d2-4dfb-87f9-20a2aa3fc5a2" />
 </p>
 
 **Bước 3.5 —** Include file header của Peashooter vào `task_display.h`:
