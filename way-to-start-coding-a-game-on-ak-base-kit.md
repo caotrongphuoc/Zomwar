@@ -109,7 +109,7 @@ Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu l
   <img width="900" alt="Cấu trúc thư mục application" src="https://github.com/user-attachments/assets/c403a5a8-80c3-42fc-a96f-499c05c92a73" />
 </p>
 
-#### Ví dụ: Cập nhật logo AK Foundation
+#### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng trong) trong Plants and Zombie
 
 **Bước 3.1 —** Tạo file header trong thư mục `screens/`:
 
@@ -117,22 +117,22 @@ Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu l
   <img width="876" height="569" alt="image" src="https://github.com/user-attachments/assets/aa947653-4c3f-4bb5-93dc-5ad8a2048968" />
 </p>
 
-**Bước 3.2 —** Tạo file lưu trữ và xử lý dữ liệu bitmap cho màn hình hiển thị:
+**Bước 3.2 —** Tạo file lưu trữ và xử lý dữ liệu bitmap của Peashooter cho màn hình hiển thị:
 
 <p align="center">
   <img width="1274" height="835" alt="image" src="https://github.com/user-attachments/assets/39eda4fc-1f14-4ab8-b3f4-96a2b6893b24" />
 </p>
 
-**Bước 3.3 —** Include file header vào `scr_startup.h`:
+**Bước 3.3 —** Tạo file header trong thư mục `screens/`:
 
 <p align="center">
-  <img width="800" alt="Include header" src="https://github.com/user-attachments/assets/f15b90a6-9d31-4b5b-aaee-93a6644003b7" />
+  <img width="845" height="565" alt="image" src="https://github.com/user-attachments/assets/ec495618-9890-4ee6-9835-af274cb504cd" />
 </p>
 
-**Bước 3.4 —** Trong file `scr_startup.cpp`, cập nhật lại hàm `view_scr_startup()`:
+**Bước 3.4 —** Tạo file xử lý dữ liệu bitmap của Peashooter cho màn hình hiển thị:
 
 <p align="center">
-  <img width="800" alt="Cập nhật hàm view_scr_startup" src="https://github.com/user-attachments/assets/9d497da1-3adf-4f9c-83bf-7bbdbe6580c0" />
+  <img width="976" height="713" alt="image" src="https://github.com/user-attachments/assets/cd858d8d-046c-4c3e-bf0c-2c84fbd66123" />
 </p>
 
 **Bước 3.5 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
