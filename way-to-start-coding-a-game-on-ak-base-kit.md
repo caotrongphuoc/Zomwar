@@ -1,6 +1,6 @@
 # AK-Base-Kit STM32L151 — Hướng Dẫn Bắt Đầu Lập Trình Game
 
-Chào mừng bạn đến với dự án phát triển Game trên vi điều khiển STM32L151! Repository này cung cấp bộ source code nền tảng cùng tài liệu hướng dẫn chi tiết, giúp bạn nhanh chóng làm quen với kiến trúc hệ thống và bắt tay vào lập trình tựa game của riêng mình.
+Chào mừng bạn đến với dự án lập trình Game trên vi điều khiển STM32L151! Repository này cung cấp bộ source code nền tảng cùng tài liệu hướng dẫn chi tiết, giúp bạn nhanh chóng làm quen với kiến trúc hệ thống và bắt tay vào phát triển tựa game của riêng mình.
 
 ---
 
@@ -8,17 +8,17 @@ Chào mừng bạn đến với dự án phát triển Game trên vi điều khi
 
 - [I. Tạo "Sân chơi riêng" (Fork)](#i-tạo-sân-chơi-riêng-fork)
 - [II. Setup môi trường Build & Nạp kit](#ii-setup-môi-trường-build--nạp-kit)
-- [III. Quy trình lập trình game hằng ngày](#iii-quy-trình-lập-trình-game-hằng-ngày)
-  - [Bước 0: Tạo thư mục làm việc](#bước-0-tạo-thư-mục-làm-việc)
-  - [Bước 1: Clone repo về máy](#bước-1-clone-repo-về-máy)
-  - [Bước 2: Modify Game](#bước-2-modify-game)
-  - [Bước 3: Push code lên GitHub](#bước-3-push-code-lên-github)
+- [III. Quy trình lập trình game](#iii-quy-trình-lập-trình-game)
+  - [Bước 1: Tạo thư mục làm việc](#bước-1-tạo-thư-mục-làm-việc)
+  - [Bước 2: Clone repo về máy](#bước-2-clone-repo-về-máy)
+  - [Bước 3: Modify Game](#bước-3-modify-game)
+  - [Bước 4: Push code lên GitHub](#bước-4-push-code-lên-github)
 
 ---
 
 ## I. Tạo "Sân chơi riêng" (Fork)
 
-Để bắt đầu dự án cá nhân, bạn thực hiện theo các bước sau:
+Để khởi tạo dự án cá nhân, bạn thực hiện theo các bước sau:
 
 ### 1. Truy cập repository gốc
 
@@ -26,7 +26,7 @@ Chào mừng bạn đến với dự án phát triển Game trên vi điều khi
 
 ### 2. Fork repository
 
-Nhấn nút **Fork** ở góc trên bên phải để copy dự án về tài khoản cá nhân của bạn.
+Nhấn nút **Fork** ở góc trên bên phải để tạo một bản sao dự án về tài khoản cá nhân của bạn.
 
 <p align="center">
   <img width="900" alt="Fork repository" src="https://github.com/user-attachments/assets/591ff540-c556-4fdc-9fec-e1974bd7cdd2" />
@@ -39,10 +39,10 @@ Nhấn nút **Fork** ở góc trên bên phải để copy dự án về tài kh
 </p>
 
 > **Lưu ý:**
-> - Tên repository sẽ là **tên game** của bạn.
-> - Bạn có thể mô tả về game của mình trong phần **Description**.
+> - Đặt tên repository chính là **tên game** của bạn.
+> - Mô tả ngắn gọn về game trong phần **Description**.
 
-Sau khi tạo thành công, GitHub sẽ hiển thị repository fork — đây là "bộ khung" cơ bản để bạn phát triển và hoàn thiện game:
+Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đây chính là "bộ khung" để bạn phát triển và hoàn thiện game:
 
 <p align="center">
   <img width="900" alt="Forked repository" src="https://github.com/user-attachments/assets/37821fde-90e9-4c4e-babb-2c7dc03fa07c" />
@@ -52,7 +52,7 @@ Sau khi tạo thành công, GitHub sẽ hiển thị repository fork — đây l
 
 ## II. Setup môi trường Build & Nạp kit
 
-Vui lòng làm theo hướng dẫn chi tiết tại đây:
+Vui lòng tham khảo hướng dẫn chi tiết tại đây:
 
 **[AK Embedded Base Kit STM32L151 — Getting Started](https://epcb.vn/blogs/ak-embedded-software/ak-embedded-base-kit-stm32l151-getting-started)**
 
@@ -60,22 +60,22 @@ Vui lòng làm theo hướng dẫn chi tiết tại đây:
 
 ## III. Quy trình lập trình game
 
-> **Quan trọng:** Vì đây là dự án phần mềm nhúng, hãy sử dụng **Terminal trên môi trường Ubuntu/Linux** để đảm bảo tính chính xác.
+> **Quan trọng:** Vì đây là dự án phần mềm nhúng, bạn nên sử dụng **Terminal trên môi trường Ubuntu/Linux** để đảm bảo quá trình build và nạp firmware diễn ra chính xác.
 
 ### Bước 1: Tạo thư mục làm việc
 
-Từ thư mục `Home`, tạo một thư mục **Workspace** — đây là nơi chứa toàn bộ source code và công cụ lập trình.
+Từ thư mục `Home`, tạo một thư mục đặt tên là **Workspace** — đây sẽ là nơi chứa toàn bộ source code và công cụ lập trình.
 
 <p align="center">
   <img width="800" alt="Tạo thư mục Workspace" src="https://github.com/user-attachments/assets/60eff60e-e2d2-4f8e-9183-c67934ea0a28" />
 </p>
 
-Bên trong `Workspace`, tạo 2 thư mục con:
+Bên trong `Workspace`, tạo thêm 2 thư mục con:
 
-| Thư mục | Mục đích |
-|---------|----------|
-| `Sources` | Chứa các dự án lập trình của bạn |
-| `Tools` | Chứa các công cụ lập trình (xem chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)) |
+| Thư mục   | Mục đích                                                                          |
+| --------- | --------------------------------------------------------------------------------- |
+| `Sources` | Chứa các dự án lập trình của bạn                                                  |
+| `Tools`   | Chứa các công cụ lập trình (xem chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)) |
 
 <p align="center">
   <img width="900" alt="Cấu trúc Workspace" src="https://github.com/user-attachments/assets/b1fa5a0f-ef28-4eba-b823-bec7030117fb" />
@@ -85,9 +85,9 @@ Bên trong `Workspace`, tạo 2 thư mục con:
 
 ### Bước 2: Clone repo về máy
 
-> *Bước này chỉ thực hiện **một lần duy nhất** khi bắt đầu dự án.*
+> *Bước này chỉ cần thực hiện **một lần duy nhất** khi bắt đầu dự án.*
 
-Mở **Terminal** trong thư mục `Sources` và chạy lệnh sau (nhớ thay bằng link repo của bạn):
+Mở **Terminal** ngay tại thư mục `Sources` và chạy lệnh sau (nhớ thay bằng link repo của bạn):
 
 ```bash
 git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
@@ -101,53 +101,56 @@ git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 
 ### Bước 3: Modify Game
 
-Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu lập trình.
-s
+Mở **VSCode** trên Linux, sau đó mở repository vừa clone để bắt đầu lập trình.
+
 > Toàn bộ logic game được viết trong thư mục `application/`.
 
 <p align="center">
   <img width="900" alt="Cấu trúc thư mục application" src="https://github.com/user-attachments/assets/c403a5a8-80c3-42fc-a96f-499c05c92a73" />
 </p>
 
-#### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng trong) trong Plants and Zombies
+#### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng) trong game Plants vs. Zombies
 
-**Bước 3.1 —** Tạo file header trong thư mục `screens/`:
+**Bước 3.1 —** Tạo file header `scr_peashooter.h` trong thư mục `screens/` để khai báo các hàm vẽ màn hình Peashooter:
 
 <p align="center">
   <img width="876" height="569" alt="image" src="https://github.com/user-attachments/assets/aa947653-4c3f-4bb5-93dc-5ad8a2048968" />
 </p>
 
-**Bước 3.2 —** Tạo file lưu trữ và xử lý dữ liệu bitmap của Peashooter cho màn hình hiển thị:
+**Bước 3.2 —** Tạo file `scr_peashooter.cpp` để xử lý dữ liệu bitmap và hiển thị Peashooter lên màn hình:
 
 <p align="center">
   <img width="1274" height="835" alt="image" src="https://github.com/user-attachments/assets/39eda4fc-1f14-4ab8-b3f4-96a2b6893b24" />
 </p>
 
-**Bước 3.3 —** Tạo file header trong thư mục `screens/`:
+**Bước 3.3 —** Tạo file header `screens_bitmap.h` trong thư mục `screens/` để khai báo dữ liệu bitmap dùng chung:
 
 <p align="center">
   <img width="845" height="565" alt="image" src="https://github.com/user-attachments/assets/ec495618-9890-4ee6-9835-af274cb504cd" />
 </p>
 
-**Bước 3.4 —** Tạo file xử lý dữ liệu bitmap của Peashooter cho màn hình hiển thị:
+**Bước 3.4 —** Tạo file `screens_bitmap.cpp` chứa dữ liệu bitmap của Peashooter:
 
 <p align="center">
   <img width="976" height="713" alt="image" src="https://github.com/user-attachments/assets/cd858d8d-046c-4c3e-bf0c-2c84fbd66123" />
 </p>
 
-**Bước 3.5 —** Include file header của Peashooter vào task_display.h:
+**Bước 3.5 —** Include file header của Peashooter vào `task_display.h`:
+
 <p align="center">
   <img width="961" height="715" alt="image" src="https://github.com/user-attachments/assets/5e6d7167-7915-4335-847a-f758d74cc6ad" />
 </p>
 
-**Bước 3.6 —** Cập nhật lại case AC_DISPLAY_BUTON_MODE_RELEASED:
+**Bước 3.6 —** Cập nhật lại case `AC_DISPLAY_BUTTON_MODE_RELEASED`:
+
 <p align="center">
   <img width="1058" height="557" alt="image" src="https://github.com/user-attachments/assets/d020678d-ca86-46ea-bdfd-23a08d98394b" />
 </p>
 
-**Bước 3.7 —** Thêm 2 file scr_peashooter.cpp và screens_bitmap.cpp vào Makefile.mk trong thư mục `screens/` để compile:
+**Bước 3.7 —** Thêm hai file `scr_peashooter.cpp` và `screens_bitmap.cpp` vào `Makefile.mk` trong thư mục `screens/` để biên dịch:
+
 <p align="center">
-<img width="887" height="536" alt="image" src="https://github.com/user-attachments/assets/346fa96e-a896-4010-9fdc-462566ea37a4" />
+  <img width="887" height="536" alt="image" src="https://github.com/user-attachments/assets/346fa96e-a896-4010-9fdc-462566ea37a4" />
 </p>
 
 **Bước 3.8 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
@@ -160,7 +163,7 @@ s
 
 ### Bước 4: Push code lên GitHub
 
-Sau khi hoàn thành một tính năng, lưu lại tiến độ lên repo cá nhân bằng các lệnh sau (chạy tại **thư mục gốc** của repo):
+Sau khi hoàn thành một tính năng, hãy lưu lại tiến độ lên repo cá nhân bằng các lệnh sau (chạy tại **thư mục gốc** của repo):
 
 ```bash
 git add .
@@ -180,7 +183,7 @@ git push origin main
   <img width="900" alt="Repository đã cập nhật" src="https://github.com/user-attachments/assets/d09a9419-0d1b-47d8-9148-ef494f58932a" />
 </p>
 
-> Sau bước này, mọi người có thể truy cập trực tiếp vào link GitHub của bạn để xem tiến độ và trải nghiệm game bạn đã viết.
+> Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
 
 ---
 
@@ -192,5 +195,5 @@ git push origin main
 ---
 
 <p align="center">
-  <i>Chúc bạn lập trình vui vẻ và tạo ra những tựa game thú vị!</i>
+  <i>Chúc bạn lập trình vui vẻ và tạo ra những tựa game thật thú vị!</i>
 </p>
