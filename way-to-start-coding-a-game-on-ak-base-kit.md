@@ -30,10 +30,6 @@ Nhấn nút **Fork** ở góc trên bên phải để tạo một bản sao dự
 Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **Fork** để ủng hộ tác giả nhé.
 
 <p align="center">
-  <img width="1338" height="640" alt="Screenshot from 2026-04-29 15-43-54" src="https://github.com/user-attachments/assets/bdb2c317-071f-49e9-94da-fccd1a805158" />
-</p>
-
-<p align="center">
 <img width="1338" height="640" alt="Screenshot from 2026-04-29 16-02-00" src="https://github.com/user-attachments/assets/eb87b69c-5c76-40b2-bc36-869757adf1a1" />
 </p>
 
