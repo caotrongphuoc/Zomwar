@@ -1,0 +1,1 @@
+sources/app/app_modbus_pull.cpp:75:6:void updateDataModbusDevice(MB_DeviceStruct_t*)	48	static

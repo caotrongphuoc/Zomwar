@@ -1,26 +1,3 @@
-# Build output
-application/build_*/
-**/build_*/
-**/build/
-
-!application/build_*/*.bin
-!**/build_*/*.bin
-
-# Object files
-*.o
-*.obj
-
-# Dependency files
-*.d
-
-# Compiled binaries
-*.axf
-*.elf
-*.hex
-*.map
-*.out
-*.su
-
 # IDE / Editor
 .vscode/
 .idea/

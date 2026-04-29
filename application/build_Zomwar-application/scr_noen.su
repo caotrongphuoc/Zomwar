@@ -1,0 +1,2 @@
+sources/app/screens/scr_noen.cpp:75:6:void scr_noen_handle(ak_msg_t*)	32	static
+sources/app/screens/scr_noen.cpp:66:6:void view_scr_noen()	40	static
