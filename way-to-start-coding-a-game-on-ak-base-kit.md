@@ -174,13 +174,13 @@ git push origin main
 **Kết quả sau khi chạy lệnh:**
 
 <p align="center">
-  <img width="800" alt="Kết quả git push" src="https://github.com/user-attachments/assets/ff8edf7a-e368-42c2-82dc-123d16843b01" />
+  <img width="609" height="195" alt="image" src="https://github.com/user-attachments/assets/b3a51ad7-c300-4749-bcf4-ab5d702d168b" />
 </p>
 
 **Repository đã được cập nhật trên GitHub:**
 
 <p align="center">
-  <img width="900" alt="Repository đã cập nhật" src="https://github.com/user-attachments/assets/d09a9419-0d1b-47d8-9148-ef494f58932a" />
+  <img width="1263" height="551" alt="image" src="https://github.com/user-attachments/assets/ef62c784-0911-4af4-8a0b-1fd914850e91" />
 </p>
 
 > Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
