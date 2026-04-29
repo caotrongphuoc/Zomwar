@@ -46,7 +46,7 @@ Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **F
 Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đây chính là "bộ khung" để bạn phát triển và hoàn thiện game:
 
 <p align="center">
-  <img width="900" alt="Forked repository" src="https://github.com/user-attachments/assets/37821fde-90e9-4c4e-babb-2c7dc03fa07c" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/614fafce-3090-4be0-9880-3c7dc7d6f979" />
 </p>
 
 ---
