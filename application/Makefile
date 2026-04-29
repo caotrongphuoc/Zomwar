@@ -10,7 +10,7 @@
 Print = @echo "~"
 
 # Name of build target ex: ak-base-kit-stm32l151-application.bin
-NAME_MODULE = ak-base-kit-stm32l151-application
+NAME_MODULE = Zomwar-application
 PROJECT = $(NAME_MODULE)
 
 GCC_PATH			= /home/ctp/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10
