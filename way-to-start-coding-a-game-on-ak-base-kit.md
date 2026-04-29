@@ -36,7 +36,7 @@ Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **F
 ### 3. Tạo bản fork
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/378721d5-26c5-4898-b523-7e07594f6583" alt="Create fork" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="Screenshot from 2026-04-29 15-59-18" src="https://github.com/user-attachments/assets/7e5ea5c1-8f8a-4b10-99c9-c992422406b2" />
 </p>
 
 > **Note:**
