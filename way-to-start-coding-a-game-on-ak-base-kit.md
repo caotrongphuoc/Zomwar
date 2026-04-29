@@ -140,9 +140,9 @@ s
   <img width="961" height="715" alt="image" src="https://github.com/user-attachments/assets/5e6d7167-7915-4335-847a-f758d74cc6ad" />
 </p>
 
-**Bước 3.6 —** Include file header của Peashooter vào task_display.h:
+**Bước 3.6 —** Cập nhật lại case AC_DISPLAY_BUTON_MODE_RELEASED:
 <p align="center">
-  <img width="961" height="715" alt="image" src="https://github.com/user-attachments/assets/5e6d7167-7915-4335-847a-f758d74cc6ad" />
+  <img width="1058" height="557" alt="image" src="https://github.com/user-attachments/assets/d020678d-ca86-46ea-bdfd-23a08d98394b" />
 </p>
 
 **Bước 3.7 —** Thêm 2 file scr_peashooter.cpp và screens_bitmap.cpp vào Makefile.mk trong thư mục `screens/` để compile:
@@ -150,7 +150,7 @@ s
 <img width="887" height="536" alt="image" src="https://github.com/user-attachments/assets/346fa96e-a896-4010-9fdc-462566ea37a4" />
 </p>
 
-**Bước 3.5 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
+**Bước 3.8 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
 
 <p align="center">
   <img width="400" alt="Kết quả trên kit" src="https://github.com/user-attachments/assets/d9032475-3f4c-4f79-8073-ecb10345333f" />
