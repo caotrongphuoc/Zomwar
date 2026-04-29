@@ -104,10 +104,16 @@ git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 
 Mở **VSCode** trên Linux, sau đó mở repository vừa clone để bắt đầu lập trình.
 
+Đầu tiên, các bạn hãy đặt tên game của mình trong file Makefile.mk ở thư mục `application/`.
+
+<p align="center">
+  <img width="1338" height="640" alt="mkk" src="https://github.com/user-attachments/assets/d0325fb5-6f7c-45a6-bf19-000353f09b85" />
+</p>
+
 Toàn bộ logic game được viết trong thư mục `application/`.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3a4ab383-6fac-486b-8f18-67afc3521864" alt="Cấu trúc thư mục application" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/9bc2a21b-edf5-4a4e-9632-a78a1e738d8c" />
 </p>
 
 #### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng) trong game Plants vs. Zombies
@@ -115,43 +121,43 @@ Toàn bộ logic game được viết trong thư mục `application/`.
 **Bước 3.1 —** Tạo file header `scr_peashooter.h` trong thư mục `screens/` để khai báo các hàm vẽ màn hình Peashooter:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5c3e469b-468d-4273-aea7-30202b3596af" alt="scr_peashooter.h" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/f587a0d8-33f7-45c1-9ec3-5bd804524100" />
 </p>
 
 **Bước 3.2 —** Tạo file `scr_peashooter.cpp` để xử lý dữ liệu bitmap và hiển thị Peashooter lên màn hình:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3a496f51-ec9a-4bc1-beb8-35baae534a42" alt="scr_peashooter.cpp" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/b1528e3a-1604-4854-b4a4-acd6b5ea4b14" />
 </p>
 
 **Bước 3.3 —** Tạo file header `screens_bitmap.h` trong thư mục `screens/` để khai báo dữ liệu bitmap dùng chung:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d6ea016c-bfc8-4e0c-bda3-4c15a65fad20" alt="screens_bitmap.h" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/2796760c-c4f8-40f3-bd9d-00606f21826d" />
 </p>
 
 **Bước 3.4 —** Tạo file `screens_bitmap.cpp` chứa dữ liệu bitmap của Peashooter:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/23ebde81-f3d2-4dfb-87f9-20a2aa3fc5a2" alt="screens_bitmap.cpp" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/bc2bf175-f50b-43c5-9dc6-54fb0e3d0288" />
 </p>
 
 **Bước 3.5 —** Include file header của Peashooter vào `task_display.h`:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7fe8c914-5d52-4e23-afeb-e3d936b25502" alt="task_display.h" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/9c1bf389-2df6-40cf-a74f-8e8a4267636e" />
 </p>
 
 **Bước 3.6 —** Cập nhật lại case `AC_DISPLAY_BUTTON_MODE_RELEASED`:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7f491cf1-d9e9-4fcb-bd11-7db6c3f24f43" alt="AC_DISPLAY_BUTTON_MODE_RELEASED" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="Screenshot from 2026-04-29 15-26-56" src="https://github.com/user-attachments/assets/e3a1b7bc-e7fa-4a41-be61-d1095b2b2689" />
 </p>
 
 **Bước 3.7 —** Thêm hai file `scr_peashooter.cpp` và `screens_bitmap.cpp` vào `Makefile.mk` trong thư mục `screens/` để biên dịch:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c96aeceb-d40c-4552-bfd5-03f7cff28283" alt="Makefile.mk" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="Screenshot from 2026-04-29 15-28-00" src="https://github.com/user-attachments/assets/09e4b3e7-20b1-48ac-8ede-c25285ea1de6" />
 </p>
 
 **Bước 3.8 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-quick-start-guide-setup-môi-trường)):
