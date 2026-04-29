@@ -102,14 +102,14 @@ git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 ### Bước 3: Modify Game
 
 Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu lập trình.
-
+s
 > Toàn bộ logic game được viết trong thư mục `application/`.
 
 <p align="center">
   <img width="900" alt="Cấu trúc thư mục application" src="https://github.com/user-attachments/assets/c403a5a8-80c3-42fc-a96f-499c05c92a73" />
 </p>
 
-#### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng trong) trong Plants and Zombie
+#### Ví dụ: Hiển thị màn hình Peashooter (Cây đậu bắn súng trong) trong Plants and Zombies
 
 **Bước 3.1 —** Tạo file header trong thư mục `screens/`:
 
@@ -133,6 +133,21 @@ Mở **VSCode** trên Linux và mở repository vừa clone để bắt đầu l
 
 <p align="center">
   <img width="976" height="713" alt="image" src="https://github.com/user-attachments/assets/cd858d8d-046c-4c3e-bf0c-2c84fbd66123" />
+</p>
+
+**Bước 3.5 —** Include file header của Peashooter vào task_display.h:
+<p align="center">
+  <img width="961" height="715" alt="image" src="https://github.com/user-attachments/assets/5e6d7167-7915-4335-847a-f758d74cc6ad" />
+</p>
+
+**Bước 3.6 —** Include file header của Peashooter vào task_display.h:
+<p align="center">
+  <img width="961" height="715" alt="image" src="https://github.com/user-attachments/assets/5e6d7167-7915-4335-847a-f758d74cc6ad" />
+</p>
+
+**Bước 3.7 —** Thêm 2 file scr_peashooter.cpp và screens_bitmap.cpp vào Makefile.mk trong thư mục `screens/` để compile:
+<p align="center">
+<img width="887" height="536" alt="image" src="https://github.com/user-attachments/assets/346fa96e-a896-4010-9fdc-462566ea37a4" />
 </p>
 
 **Bước 3.5 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
