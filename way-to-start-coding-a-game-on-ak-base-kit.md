@@ -53,7 +53,7 @@ Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đâ
 
 ## II. Quick Start Guide (Setup môi trường)
 
-Để build source code và nạp firmware lên kit, bạn cần cài đặt môi trường phát triển trên Ubuntu/Linux. Hướng dẫn chi tiết từng bước có tại:
+Để build source code và nạp firmware lên kit, bạn cần cài đặt môi trường phát triển trên Ubuntu/Linux. Hướng dẫn chi tiết từng bước có tại đây (Ctrl + Click vào link để load link trong tab mới):
 
 **[AK Embedded Base Kit STM32L151 — Getting Started](https://epcb.vn/blogs/ak-embedded-software/ak-embedded-base-kit-stm32l151-getting-started)**
 
