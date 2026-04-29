@@ -195,7 +195,15 @@ git push origin main
   <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/e5e2dc9d-9672-4d4c-b6f5-72a1666ecbfa" />
 </p>
 
-Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
+Trước mỗi phiên làm việc, hãy cập nhật source code mới nhất từ GitHub về máy bằng lệnh sau (chạy tại **thư mục gốc** của repo):
+
+```bash
+git pull origin main --rebase
+```
+
+> **Note:** Lệnh này giúp bạn lấy về toàn bộ thay đổi mới nhất từ GitHub, đồng thời sắp xếp lại các commit của bạn một cách gọn gàng — tránh tình trạng xung đột (conflict) hay lịch sử git rối rắm. Sau khi đồng bộ xong, bạn cứ thoải mái lập trình; đến khi muốn lưu tiến độ, chỉ việc dùng lại 3 lệnh `add` → `commit` → `push` ở trên là xong.
+
+Từ giờ, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
 
 ---
 
