@@ -39,7 +39,7 @@ Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **F
   <img width="500" alt="Create fork" src="https://github.com/user-attachments/assets/378721d5-26c5-4898-b523-7e07594f6583" />
 </p>
 
-> **Lưu ý:**
+> **Note:**
 > - Đặt tên repository chính là **tên game** của bạn.
 > - Mô tả ngắn gọn về game trong phần **Description**.
 
@@ -61,7 +61,7 @@ Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đâ
 
 ## III. Quy trình lập trình game
 
-> **Quan trọng:** Vì đây là dự án phần mềm nhúng, bạn nên sử dụng **Terminal trên môi trường Ubuntu/Linux** để đảm bảo quá trình build và nạp firmware diễn ra chính xác.
+> **Note:** Vì đây là dự án phần mềm nhúng, bạn nên sử dụng **Terminal trên môi trường Ubuntu/Linux** để đảm bảo quá trình build và nạp firmware diễn ra chính xác.
 
 ### Bước 1: Tạo thư mục làm việc
 
@@ -86,7 +86,7 @@ Bên trong `Workspace`, tạo thêm 2 thư mục con:
 
 ### Bước 2: Clone repo về máy
 
-> **Lưu ý:** Bước này chỉ cần thực hiện **một lần duy nhất** khi bắt đầu dự án.
+> **Note:** Bước này chỉ cần thực hiện **một lần duy nhất** khi bắt đầu dự án.
 
 Mở **Terminal** ngay tại thư mục `Sources` và chạy lệnh sau (nhớ thay bằng link repo của bạn):
 
