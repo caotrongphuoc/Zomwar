@@ -1,4 +1,4 @@
-<img width="1286" height="783" alt="image" src="https://github.com/user-attachments/assets/dbd5a3c3-e114-4ce5-9578-a3eeb5779fd6" /># Hướng Dẫn Bắt Đầu Lập Trình Game
+# Hướng Dẫn Bắt Đầu Lập Trình Game
 
 Chào mừng bạn đến với dự án lập trình Game trên vi điều khiển STM32L151! Repository này cung cấp bộ source code nền tảng cùng tài liệu hướng dẫn chi tiết, giúp bạn nhanh chóng làm quen với kiến trúc hệ thống và bắt tay vào phát triển tựa game của riêng mình.
 
