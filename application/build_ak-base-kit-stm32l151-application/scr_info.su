@@ -1,2 +1,0 @@
-sources/app/screens/scr_info.cpp:42:6:void scr_info_handle(ak_msg_t*)	8	static
-sources/app/screens/scr_info.cpp:29:6:void view_scr_info()	56	dynamic
