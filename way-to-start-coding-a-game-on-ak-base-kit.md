@@ -103,7 +103,7 @@ git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 
 Mở **VSCode** trên Linux, sau đó mở repository vừa clone để bắt đầu lập trình.
 
-> Toàn bộ logic game được viết trong thư mục `application/`.
+Toàn bộ logic game được viết trong thư mục `application/`.
 
 <p align="center">
   <img width="900" alt="Cấu trúc thư mục application" src="https://github.com/user-attachments/assets/c403a5a8-80c3-42fc-a96f-499c05c92a73" />
