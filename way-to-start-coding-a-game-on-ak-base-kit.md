@@ -68,7 +68,7 @@ Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đâ
 Từ thư mục `Home`, tạo một thư mục đặt tên là **Workspace** — đây sẽ là nơi chứa toàn bộ source code và công cụ lập trình.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/60eff60e-e2d2-4f8e-9183-c67934ea0a28" alt="Tạo thư mục Workspace" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="Screenshot from 2026-04-29 15-40-47" src="https://github.com/user-attachments/assets/8922db63-6ff0-4868-8b3a-750f42a10ccb" />
 </p>
 
 Bên trong `Workspace`, tạo thêm 2 thư mục con:
@@ -79,7 +79,7 @@ Bên trong `Workspace`, tạo thêm 2 thư mục con:
 | `Tools`   | Chứa các công cụ lập trình (xem chi tiết tại [phần II](#ii-quick-start-guide-setup-môi-trường)) |
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b1fa5a0f-ef28-4eba-b823-bec7030117fb" alt="Cấu trúc Workspace" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/7bd70fc6-5da7-45b9-ba11-120c7a70cdc2" />
 </p>
 
 ---
@@ -181,17 +181,17 @@ git push origin main
 **Kết quả sau khi chạy lệnh:**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b3a51ad7-c300-4749-bcf4-ab5d702d168b" alt="Kết quả git push" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="Screenshot from 2026-04-29 15-36-40" src="https://github.com/user-attachments/assets/5841c5dc-74e6-4714-ab3a-d824be16dc9b" />
 </p>
 
 **Repository đã được cập nhật trên GitHub:**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fdb79fe0-d4b9-4625-bd3e-ca3216a9a633" alt="Repository đã cập nhật" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/0da467a0-5ba5-4058-a1be-20f578c33d36" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/417de700-df85-42b6-8f61-7816536142af" alt="Chi tiết repository" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/e5e2dc9d-9672-4d4c-b6f5-72a1666ecbfa" />
 </p>
 
 Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
