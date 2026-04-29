@@ -181,7 +181,7 @@ git push origin main
 **Repository đã được cập nhật trên GitHub:**
 
 <p align="center">
-  <img width="1263" height="551" alt="image" src="https://github.com/user-attachments/assets/ef62c784-0911-4af4-8a0b-1fd914850e91" />
+  <img width="1224" height="785" alt="Screenshot from 2026-04-29 11-49-23" src="https://github.com/user-attachments/assets/fdb79fe0-d4b9-4625-bd3e-ca3216a9a633" />
 </p>
 
 Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
