@@ -184,6 +184,10 @@ git push origin main
   <img width="1224" height="785" alt="Screenshot from 2026-04-29 11-49-23" src="https://github.com/user-attachments/assets/fdb79fe0-d4b9-4625-bd3e-ca3216a9a633" />
 </p>
 
+<p align="center">
+<img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/417de700-df85-42b6-8f61-7816536142af" />
+</p>
+
 Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
 
 ---
