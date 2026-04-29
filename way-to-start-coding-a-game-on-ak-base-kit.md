@@ -1,4 +1,4 @@
-# AK-Base-Kit STM32L151 — Hướng Dẫn Bắt Đầu Lập Trình Game
+# Hướng Dẫn Bắt Đầu Lập Trình Game
 
 Chào mừng bạn đến với dự án lập trình Game trên vi điều khiển STM32L151! Repository này cung cấp bộ source code nền tảng cùng tài liệu hướng dẫn chi tiết, giúp bạn nhanh chóng làm quen với kiến trúc hệ thống và bắt tay vào phát triển tựa game của riêng mình.
 
@@ -50,9 +50,9 @@ Sau khi fork thành công, GitHub sẽ chuyển đến repository mới — đâ
 
 ---
 
-## II. Setup môi trường Build & Nạp kit
+## II. Quick Start Guide (Setup môi trường)
 
-Vui lòng tham khảo hướng dẫn chi tiết tại đây:
+Để build source code và nạp firmware lên kit, bạn cần cài đặt môi trường phát triển trên Ubuntu/Linux. Hướng dẫn chi tiết từng bước có tại:
 
 **[AK Embedded Base Kit STM32L151 — Getting Started](https://epcb.vn/blogs/ak-embedded-software/ak-embedded-base-kit-stm32l151-getting-started)**
 
