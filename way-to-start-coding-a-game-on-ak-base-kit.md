@@ -34,7 +34,7 @@ Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **F
 </p>
 
 <p align="center">
-<img width="1017" height="640" alt="Screenshot from 2026-04-29 16-02-00" src="https://github.com/user-attachments/assets/eb87b69c-5c76-40b2-bc36-869757adf1a1" />
+<img width="1338" height="640" alt="Screenshot from 2026-04-29 16-02-00" src="https://github.com/user-attachments/assets/eb87b69c-5c76-40b2-bc36-869757adf1a1" />
 </p>
 
 ### 3. Tạo bản fork
