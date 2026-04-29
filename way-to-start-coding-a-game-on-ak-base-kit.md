@@ -86,7 +86,7 @@ Bên trong `Workspace`, tạo thêm 2 thư mục con:
 
 ### Bước 2: Clone repo về máy
 
-> *Bước này chỉ cần thực hiện **một lần duy nhất** khi bắt đầu dự án.*
+> **Lưu ý:** Bước này chỉ cần thực hiện **một lần duy nhất** khi bắt đầu dự án.
 
 Mở **Terminal** ngay tại thư mục `Sources` và chạy lệnh sau (nhớ thay bằng link repo của bạn):
 
