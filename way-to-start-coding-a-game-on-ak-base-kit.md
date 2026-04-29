@@ -153,7 +153,7 @@ s
 **Bước 3.8 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
 
 <p align="center">
-  <img width="1920" height="2560" alt="image" src="https://github.com/user-attachments/assets/2fe04678-1bd1-4046-ab4b-a819a6aaac9f" />
+  <img width="2540" height="2562" alt="image" src="https://github.com/user-attachments/assets/513e18e3-4141-418a-a290-2bc45f97b54e" />
 </p>
 
 ---
