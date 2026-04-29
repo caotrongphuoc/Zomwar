@@ -95,7 +95,7 @@ git clone https://github.com/<ten-cua-ban>/<ten-repo-da-clone>.git
 ```
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6ba6e15d-ce85-483e-9519-61fcb017dafb" alt="Clone repository" style="width:900px; height:500px; object-fit:contain; background:#f6f8fa; border-radius:6px;" />
+  <img width="1338" height="640" alt="image" src="https://github.com/user-attachments/assets/c58bd5e7-b73e-4095-b3c6-484a43f09ec8" />
 </p>
 
 ---
