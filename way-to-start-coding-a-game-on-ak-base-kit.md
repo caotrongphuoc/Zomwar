@@ -1,4 +1,4 @@
-# Hướng Dẫn Bắt Đầu Lập Trình Game
+<h1 align="center">Hướng Dẫn Bắt Đầu Lập Trình Game</h1>
 
 Chào mừng bạn đến với dự án lập trình Game trên vi điều khiển STM32L151! Repository này cung cấp bộ source code nền tảng cùng tài liệu hướng dẫn chi tiết, giúp bạn nhanh chóng làm quen với kiến trúc hệ thống và bắt tay vào phát triển tựa game của riêng mình.
 
