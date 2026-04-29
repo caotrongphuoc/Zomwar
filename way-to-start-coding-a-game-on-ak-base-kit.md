@@ -188,7 +188,7 @@ git push origin main
 **Repository đã được cập nhật trên GitHub:**
 
 <p align="center">
-  <img width="1338" height="640" alt="Repository đã cập nhật" src="https://github.com/user-attachments/assets/0da467a0-5ba5-4058-a1be-20f578c33d36" />
+  <img width="1338" height="640" alt="585292279-0da467a0-5ba5-4058-a1be-20f578c33d36(1)" src="https://github.com/user-attachments/assets/d8866aa0-c33d-42f1-8425-2d5174903ae4" />
 </p>
 
 <p align="center">
