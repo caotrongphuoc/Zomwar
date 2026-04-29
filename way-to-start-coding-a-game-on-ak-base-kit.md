@@ -30,7 +30,7 @@ Nhấn nút **Fork** ở góc trên bên phải để tạo một bản sao dự
 Ngoài ra, các bạn có thể nhấn nút **Starred** ở bên phải nút **Fork** để ủng hộ tác giả nhé.
 
 <p align="center">
-  <img width="1224" height="785" alt="Screenshot from 2026-04-29 11-53-32" src="https://github.com/user-attachments/assets/78d625b0-f002-4356-a35d-f41cd9b66758" />
+  <img width="1224" height="775" alt="Screenshot from 2026-04-29 11-53-32(1)" src="https://github.com/user-attachments/assets/620b1396-a728-46f2-884f-a788533c4d69" />
 </p>
 
 ### 3. Tạo bản fork
