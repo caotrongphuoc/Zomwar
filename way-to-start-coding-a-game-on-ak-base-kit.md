@@ -139,19 +139,19 @@ Toàn bộ logic game được viết trong thư mục `application/`.
 **Bước 3.5 —** Include file header của Peashooter vào `task_display.h`:
 
 <p align="center">
-  <img width="961" height="715" alt="image" src="https://github.com/user-attachments/assets/5e6d7167-7915-4335-847a-f758d74cc6ad" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/7fe8c914-5d52-4e23-afeb-e3d936b25502" />
 </p>
 
 **Bước 3.6 —** Cập nhật lại case `AC_DISPLAY_BUTTON_MODE_RELEASED`:
 
 <p align="center">
-  <img width="1058" height="557" alt="image" src="https://github.com/user-attachments/assets/d020678d-ca86-46ea-bdfd-23a08d98394b" />
+  <img width="1224" height="785" alt="abc" src="https://github.com/user-attachments/assets/7f491cf1-d9e9-4fcb-bd11-7db6c3f24f43" />
 </p>
 
 **Bước 3.7 —** Thêm hai file `scr_peashooter.cpp` và `screens_bitmap.cpp` vào `Makefile.mk` trong thư mục `screens/` để biên dịch:
 
 <p align="center">
-  <img width="887" height="536" alt="image" src="https://github.com/user-attachments/assets/346fa96e-a896-4010-9fdc-462566ea37a4" />
+  <img width="1224" height="785" alt="image" src="https://github.com/user-attachments/assets/c96aeceb-d40c-4552-bfd5-03f7cff28283" />
 </p>
 
 **Bước 3.8 —** Build và nạp firmware lên kit (xem hướng dẫn chi tiết tại [phần II](#ii-setup-môi-trường-build--nạp-kit)):
@@ -184,13 +184,16 @@ git push origin main
   <img width="1263" height="551" alt="image" src="https://github.com/user-attachments/assets/ef62c784-0911-4af4-8a0b-1fd914850e91" />
 </p>
 
-> Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
+Sau bước này, bất kỳ ai cũng có thể truy cập link GitHub của bạn để theo dõi tiến độ và trải nghiệm tựa game mà bạn đã tạo ra.
 
 ---
 
 ## Liên hệ & Hỗ trợ
 
-- Website: [epcb.vn](https://epcb.vn)
+- Linkedin: www.linkedin.com/in/cao-trong-phuoc
+- Dép lào: 0936310918
+
+## Tài liệu tham khảo
 - Blog: [AK Embedded Software](https://epcb.vn/blogs/ak-embedded-software)
 
 ---
