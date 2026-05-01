@@ -145,7 +145,7 @@ Toàn bộ logic game được viết trong thư mục `application/sources/app`
 **Bước 3.5 —** Include file header của Peashooter vào `task_display.h`:
 
 <p align="center">
-  <img width="1338" height="640" alt="repo-ak" src="hardware/images/Quickstartguide/include-header-to-task-display.png" />
+  <img width="1338" height="640" alt="repo-ak" src="hardware/images/Quickstartguide/inlcude-header-to-task-display.png" />
 </p>
 
 **Bước 3.6 —** Cập nhật lại case `AC_DISPLAY_BUTTON_MODE_RELEASED`:
