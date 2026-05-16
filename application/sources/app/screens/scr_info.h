@@ -15,6 +15,8 @@
 #include "task_display.h"
 #include "view_render.h"
 
+#include "scr_menu_game.h"
+
 #include "buzzer.h"
 
 extern view_dynamic_t dyn_view_info;

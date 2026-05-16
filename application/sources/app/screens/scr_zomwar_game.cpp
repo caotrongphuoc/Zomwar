@@ -140,31 +140,31 @@ void scr_zw_game_handle(ak_msg_t* msg) {
 		}
 		break;
 
-	case AC_DISPLAY_BUTON_UP_PRESSED: {
+	case AC_DISPLAY_BUTTON_UP_PRESSED: {
 		APP_DBG_SIG("ZW_GAME BTN_UP_PRESSED\n");
 		task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_UP);
 	}
 		break;
 
-	// case AC_DISPLAY_BUTON_UP_RELEASED: {
+	// case AC_DISPLAY_BUTTON_UP_RELEASED: {
 	// 	APP_DBG_SIG("ZW_GAME BTN_UP_RELEASED\n");
 	// 	task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_STOP);
 	// }
 	// 	break;
 
-	case AC_DISPLAY_BUTON_DOWN_PRESSED: {
+	case AC_DISPLAY_BUTTON_DOWN_PRESSED: {
 		APP_DBG_SIG("ZW_GAME BTN_DOWN_PRESSED\n");
 		task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_DOWN);
 	}
 		break;
 
-	// case AC_DISPLAY_BUTON_DOWN_RELEASED: {
+	// case AC_DISPLAY_BUTTON_DOWN_RELEASED: {
 	// 	APP_DBG_SIG("ZW_GAME BTN_DOWN_RELEASED\n");
 	// 	task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_STOP);
 	// }
 	// 	break;
 
-	case AC_DISPLAY_BUTON_MODE_RELEASED: 
+	case AC_DISPLAY_BUTTON_MODE_RELEASED: 
 		APP_DBG_SIG("ZW_GAME BTN_MODE_RELEASED\n");
 		if(zw_game_state == GAME_PLAY) {
 			task_post_pure_msg(ZW_GAME_BULLET_ID, ZW_GAME_BULLET_SHOOT);

@@ -224,10 +224,22 @@ build_Zomwar-application/app.o: sources/app/app.cpp \
  sources/app/screens/scr_idle.h sources/app/app.h sources/app/app_dbg.h \
  sources/app/task_list.h sources/app/task_display.h \
  sources/common/view_render.h sources/app/screens/scr_info.h \
- sources/app/screens/scr_startup.h sources/app/screens/scr_noen.h \
+ sources/app/screens/scr_menu_game.h sources/app/screens/screens.h \
+ sources/app/screens/scr_startup.h sources/app/screens/scr_idle.h \
+ sources/app/screens/scr_info.h sources/app/screens/scr_noen.h \
  sources/app/screens/scr_es35sw_th_sensor.h sources/app/app_modbus_pull.h \
  sources/networks/mbmaster-v2.9.6/mbmaster/include/common/mbtypes.h \
  sources/networks/mbmaster-v2.9.6/mbmaster/include/common/mbportlayer.h \
+ sources/app/screens/scr_lhio404_io_device.h \
+ sources/app/screens/scr_zomwar_game.h sources/app/app_bsp.h \
+ sources/driver/eeprom/eeprom.h sources/app/app_eeprom.h \
+ sources/app/screens/scr_bitmap.h \
+ sources/app/game/zomwar_game/zw_game_gunner.h \
+ sources/app/screens/scr_zomwar_game.h \
+ sources/app/game/zomwar_game/zw_game_bullet.h \
+ sources/app/game/zomwar_game/zw_game_car.h \
+ sources/app/screens/scr_startup.h sources/app/screens/scr_noen.h \
+ sources/app/screens/scr_es35sw_th_sensor.h \
  sources/app/screens/scr_lhio404_io_device.h sources/app/task_zigbee.h \
  sources/sys/sys_irq.h \
  sources/platform/stm32l/arduino/libraries/SPI/SPI.h \

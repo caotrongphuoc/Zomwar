@@ -52,9 +52,9 @@ void scr_info_handle(ak_msg_t* msg) {
 		SCREEN_TRAN(scr_idle_handle, &scr_idle);
 	}
 
-	case AC_DISPLAY_BUTON_MODE_RELEASED: {
-		APP_DBG_SIG("AC_DISPLAY_BUTON_MODE_RELEASED\n");
-		SCREEN_TRAN(scr_idle_handle, &scr_idle);
+	case AC_DISPLAY_BUTTON_MODE_RELEASED: {
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
+		SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
 	}
 		break;
 

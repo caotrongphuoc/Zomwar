@@ -13,4 +13,10 @@
 extern view_dynamic_t dyn_view_item_zomwar_game;
 extern view_screen_t scr_zomwar_game;
 extern void scr_zw_game_handle(ak_msg_t* msg);
+
+// scr_menu_game
+extern view_dynamic_t dyn_view_item_menu_game;
+extern view_screen_t scr_menu_game;
+extern void scr_menu_game_handle(ak_msg_t* msg);
+
 #endif //__SCREENS_H__

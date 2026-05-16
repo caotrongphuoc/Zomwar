@@ -118,15 +118,15 @@ void scr_idle_handle(ak_msg_t* msg) {
 	}
 		break;
 
-	case AC_DISPLAY_BUTON_MODE_RELEASED: {
-		APP_DBG_SIG("AC_DISPLAY_BUTON_MODE_RELEASED\n");
+	case AC_DISPLAY_BUTTON_MODE_RELEASED: {
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
 		timer_remove_attr(AC_TASK_DISPLAY_ID, AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE);
 		SCREEN_TRAN(scr_zw_game_handle, &scr_zomwar_game);
 	}
 		break;
 
-	case AC_DISPLAY_BUTON_UP_RELEASED: {
-		APP_DBG_SIG("AC_DISPLAY_BUTON_UP_RELEASED\n");
+	case AC_DISPLAY_BUTTON_UP_RELEASED: {
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_RELEASED\n");
 		ball new_ball;
 		new_ball.id = ball::total++;
 
@@ -146,8 +146,8 @@ void scr_idle_handle(ak_msg_t* msg) {
 	}
 		break;
 
-	case AC_DISPLAY_BUTON_DOWN_RELEASED: {
-		APP_DBG_SIG("AC_DISPLAY_BUTON_DOWN_RELEASED\n");
+	case AC_DISPLAY_BUTTON_DOWN_RELEASED: {
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_RELEASED\n");
 		if (v_idle_ball.size()) {
 			ball::total--;
 			v_idle_ball.pop_back();
