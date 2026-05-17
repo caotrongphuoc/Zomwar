@@ -17,6 +17,8 @@
 
 #include "buzzer.h"
 
+#include "scr_game_menu.h"
+
 extern view_dynamic_t dyn_view_startup;
 
 extern view_screen_t scr_startup;

@@ -13,7 +13,7 @@
 #include "task_display.h"
 
 #include "buzzer.h"
-#include "scr_zomwar_game.h"
+#include "scr_game_zomwar.h"
 
 #define MAX_NUM_BULLET       (30)  // So luong vien dan toi da
 #define MAX_AXIS_X_BULLET    (128) // Duong bay toi da cua vien dan

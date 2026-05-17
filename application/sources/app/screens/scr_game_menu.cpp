@@ -1,4 +1,4 @@
-#include "scr_menu_game.h"
+#include "scr_game_menu.h"
 
 /*****************************************************************************/
 /* Variable and Struct Declaration - Menu game */
@@ -20,23 +20,23 @@ static char items_name[NUMBER_ITEMS][30] = {
 /*****************************************************************************/
 /* View - Menu game */
 /*****************************************************************************/
-static void view_scr_menu_game();
+static void view_scr_game_menu();
 
-view_dynamic_t dyn_view_menu_game = {
+view_dynamic_t dyn_view_game_menu = {
 	{
 		.item_type = ITEM_TYPE_DYNAMIC,
 	},
-	view_scr_menu_game
+	view_scr_game_menu
 };
 
-view_screen_t scr_menu_game = {
-	&dyn_view_menu_game,
+view_screen_t scr_game_menu = {
+	&dyn_view_game_menu,
 	ITEM_NULL,
 	ITEM_NULL,
 	.focus_item = 0,
 };
 
-void view_scr_menu_game() {
+void view_scr_game_menu() {
     view_render.setTextSize(2);
     view_render.setTextColor(WHITE);
     view_render.setCursor(30,0); 
@@ -55,7 +55,7 @@ void view_scr_menu_game() {
     zw_game_gunner_display();
 }
 
-void scr_menu_game_handle(ak_msg_t* msg) {
+void scr_game_menu_handle(ak_msg_t* msg) {
 	switch (msg->sig) {
 	case SCREEN_ENTRY: 
 		APP_DBG_SIG("SCREEN_ENTRY\n");
@@ -96,8 +96,13 @@ void scr_menu_game_handle(ak_msg_t* msg) {
 
 
 	case AC_DISPLAY_BUTTON_MODE_RELEASED: 
-		SCREEN_TRAN(scr_zw_game_handle, &scr_zomwar_game);
 		zw_game_sound_enable = true;
+		switch (current_location) {
+			case 0: SCREEN_TRAN(scr_zw_game_handle, &scr_game_zomwar); break;
+			case 1: SCREEN_TRAN(scr_game_setting_handle, &scr_game_setting); break;
+			case 2: SCREEN_TRAN(scr_game_rank_handle, &scr_game_rank); break;
+			case 3: SCREEN_TRAN(scr_idle_handle, &scr_idle); break;
+		}
 		BUZZER_PlayTones(tones_cc);
 		break;
 

@@ -1,1 +1,1 @@
-include sources/app/game/zomwar_game/Makefile.mk
+include sources/app/game/game_zomwar/Makefile.mk

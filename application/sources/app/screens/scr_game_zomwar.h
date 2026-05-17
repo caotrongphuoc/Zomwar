@@ -1,5 +1,5 @@
-#ifndef __SCR_ZOMWAR_GAME_H__
-#define __SCR_ZOMWAR_GAME_H__
+#ifndef __SCR_GAME_ZOMWAR_H__
+#define __SCR_GAME_ZOMWAR_H__
 
 #include "fsm.h"
 #include "port.h"
@@ -22,7 +22,7 @@
 #include "buzzer.h"
 
 #include "screens.h"
-#include "scr_bitmap.h"
+#include "scr_game_bitmap.h"
 
 #include "zw_game_gunner.h"
 #include "zw_game_bullet.h"
@@ -38,8 +38,8 @@ extern void zw_game_gunner_display();
 extern void zw_game_bullet_display();
 extern void zw_game_time_tick_setup();
 
-extern view_dynamic_t dyn_view_item_zomwar_game;
-extern view_screen_t scr_zomwar_game;
+extern view_dynamic_t dyn_view_item_game_zomwar;
+extern view_screen_t scr_game_zomwar;
 extern void scr_zw_game_handle(ak_msg_t* msg);
 
-#endif //__SCR_ZOMWAR_GAME_H__
+#endif //__SCR_GAME_ZOMWAR_H__

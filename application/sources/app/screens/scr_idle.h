@@ -17,6 +17,8 @@
 
 #include "buzzer.h"
 
+#include "scr_game_menu.h"
+
 #include <math.h>
 #include <vector>
 

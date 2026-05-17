@@ -13,7 +13,7 @@
 #include "task_list.h"
 #include "task_display.h"
 
-#include "scr_zomwar_game.h"
+#include "scr_game_zomwar.h"
 
 #define AXIS_X_CAR        (0)       // Toa do cua car
 #define NUM_LANES         (5)       // So luong lane duong

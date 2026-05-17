@@ -1,4 +1,4 @@
-#include "scr_zomwar_game.h"
+#include "scr_game_zomwar.h"
 
 /*****************************************************************************/
 /* Variable Declaration - Zomwar game screen */
@@ -91,24 +91,24 @@ void zw_game_grass_display() {
 	}
 }
 
-static void view_scr_zomwar_game();
+static void view_scr_game_zomwar();
 
-view_dynamic_t dyn_view_item_zomwar_game = {
+view_dynamic_t dyn_view_item_game_zomwar = {
 	{
 		.item_type = ITEM_TYPE_DYNAMIC,
 	},
-	view_scr_zomwar_game
+	view_scr_game_zomwar
 };
 
-view_screen_t scr_zomwar_game = {
-	&dyn_view_item_zomwar_game,
+view_screen_t scr_game_zomwar = {
+	&dyn_view_item_game_zomwar,
 	ITEM_NULL,
 	ITEM_NULL,
 
 	.focus_item = 0,
 };
 
-void view_scr_zomwar_game() {
+void view_scr_game_zomwar() {
 	if (zw_game_state == GAME_PLAY) {
         zw_game_frame_display();
 		zw_game_gunner_display();

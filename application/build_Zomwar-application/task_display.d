@@ -110,7 +110,23 @@ build_Zomwar-application/task_display.o: sources/app/task_display.cpp \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/inttypes.h \
  sources/app/screens/scr_idle.h sources/app/app.h sources/app/app_dbg.h \
  sources/app/task_list.h sources/app/task_display.h \
- sources/common/view_render.h \
+ sources/common/view_render.h sources/app/screens/scr_game_menu.h \
+ sources/app/screens/screens.h sources/app/screens/scr_startup.h \
+ sources/app/screens/scr_idle.h sources/app/screens/scr_info.h \
+ sources/app/screens/scr_noen.h \
+ sources/app/screens/scr_es35sw_th_sensor.h sources/app/app_modbus_pull.h \
+ sources/networks/mbmaster-v2.9.6/mbmaster/include/common/mbtypes.h \
+ sources/networks/mbmaster-v2.9.6/mbmaster/include/common/mbportlayer.h \
+ sources/app/screens/scr_lhio404_io_device.h \
+ sources/app/screens/scr_game_zomwar.h sources/app/app_bsp.h \
+ sources/driver/button/button.h sources/driver/eeprom/eeprom.h \
+ sources/app/app_eeprom.h sources/app/screens/scr_game_bitmap.h \
+ sources/app/game/game_zomwar/zw_game_gunner.h \
+ sources/app/screens/scr_game_zomwar.h \
+ sources/app/game/game_zomwar/zw_game_bullet.h \
+ sources/app/game/game_zomwar/zw_game_car.h \
+ sources/app/screens/scr_game_setting.h \
+ sources/app/screens/scr_game_rank.h \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/vector \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/bits/stl_algobase.h \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/bits/functexcept.h \
@@ -152,21 +168,7 @@ build_Zomwar-application/task_display.o: sources/app/task_display.cpp \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/concepts \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/bits/range_cmp.h \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/bits/vector.tcc \
- sources/app/screens/scr_info.h sources/app/screens/scr_menu_game.h \
- sources/app/screens/screens.h sources/app/screens/scr_startup.h \
- sources/app/screens/scr_idle.h sources/app/screens/scr_info.h \
+ sources/app/screens/scr_info.h sources/app/screens/scr_startup.h \
  sources/app/screens/scr_noen.h \
- sources/app/screens/scr_es35sw_th_sensor.h sources/app/app_modbus_pull.h \
- sources/networks/mbmaster-v2.9.6/mbmaster/include/common/mbtypes.h \
- sources/networks/mbmaster-v2.9.6/mbmaster/include/common/mbportlayer.h \
- sources/app/screens/scr_lhio404_io_device.h \
- sources/app/screens/scr_zomwar_game.h sources/app/app_bsp.h \
- sources/driver/button/button.h sources/driver/eeprom/eeprom.h \
- sources/app/app_eeprom.h sources/app/screens/scr_bitmap.h \
- sources/app/game/zomwar_game/zw_game_gunner.h \
- sources/app/screens/scr_zomwar_game.h \
- sources/app/game/zomwar_game/zw_game_bullet.h \
- sources/app/game/zomwar_game/zw_game_car.h \
- sources/app/screens/scr_startup.h sources/app/screens/scr_noen.h \
  sources/app/screens/scr_es35sw_th_sensor.h \
  sources/app/screens/scr_lhio404_io_device.h

@@ -13,7 +13,7 @@
 #include "task_list.h"
 #include "task_display.h"
 
-#include "scr_zomwar_game.h"
+#include "scr_game_zomwar.h"
 
 #define STEP_GUNNER_AXIS_Y     (10) // So buoc moi lan Gunner di chuyen len xuong
 #define SIZE_BITMAP_GUNNER_X   (25) // Kich thuoc chieu ngang cua Gunner

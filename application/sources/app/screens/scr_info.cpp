@@ -54,7 +54,7 @@ void scr_info_handle(ak_msg_t* msg) {
 
 	case AC_DISPLAY_BUTTON_MODE_RELEASED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
-		SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
+		SCREEN_TRAN(scr_game_menu_handle, &scr_game_menu);
 	}
 		break;
 

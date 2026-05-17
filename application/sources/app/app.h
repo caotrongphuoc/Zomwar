@@ -139,6 +139,7 @@ enum {
 #define AC_DISPLAY_SHOW_MERRY_CHRISTMAS_SLEEP_INTERVAL				(15000)
 #define AC_DISPLAY_SHOW_MODBUS_PULL_INTERVAL						(1500)
 #define AC_DISPLAY_SHOW_MODBUS_PULL_SLEEP_INTERVAL					(30000)
+#define ZW_GAME_TIME_SPIDER_UPDATE_INTERVAL							(3000)
 
 /* define signal */
 enum {
@@ -157,6 +158,21 @@ enum {
 	AC_DISPLAY_SHOW_MERRY_CHRISTMAS_SLEEP,
 	AC_DISPLAY_SHOW_MODBUS_PULL_UPDATE,
 	AC_DISPLAY_SHOW_MODBUS_PULL_SLEEP
+	
+};
+
+
+/*****************************************************************************/
+/*  scr_game_rank task define
+ */
+/*****************************************************************************/
+/* define timer */
+#define ZW_GAME_TIME_SPIDER_UPDATE_INTERVAL							(50)
+
+/* define signal */
+enum {
+	ZW_GAME_TIME_SPIDER_UPDATE
+	
 };
 
 /*****************************************************************************/

@@ -1,5 +1,6 @@
-build_Zomwar-application/scr_bitmap.o: sources/app/screens/scr_bitmap.cpp \
- sources/app/screens/scr_bitmap.h sources/common/view_render.h \
+build_Zomwar-application/scr_game_bitmap.o: \
+ sources/app/screens/scr_game_bitmap.cpp \
+ sources/app/screens/scr_game_bitmap.h sources/common/view_render.h \
  sources/common/view_item.h \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /home/phuoc/Workspace/Tools/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
