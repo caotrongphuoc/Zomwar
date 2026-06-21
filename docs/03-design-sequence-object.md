@@ -1,4 +1,4 @@
-# Game Object Sequences
+<h1 align="center">Game Object Sequences</h1>
 
 This document describes the runtime sequence of each main object in Zomwar. Each object is handled by its own AK task and receives signals from the screen task (`scr_game_zomwar`), button callbacks, the periodic game tick timer, or other object tasks.
 
