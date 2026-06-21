@@ -1,4 +1,4 @@
-# Runtime Signal Processing
+<h1 align="center">Runtime Signal Processing</h1>
 
 This document explains how the Zomwar Game processes button input, task messages, game-loop ticks, and object updates. The game uses the AK event-driven task architecture: each major game object owns a task, receives signals through AK messages, and updates its own state.
 
