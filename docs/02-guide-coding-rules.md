@@ -27,7 +27,7 @@ This document defines the naming conventions, code style, commit message format,
 
 ## I. Naming conventions
 
-The conventions below are drawn directly from the existing source code. New code must follow these conventions so that tooling, search, and reviewers all work consistently.
+The conventions below are drawn directly from the existing source code. You can follow these conventions to develop your coding so that tooling, search, and reviewers all work consistently.
 
 **Case styles used in this document:**
 
