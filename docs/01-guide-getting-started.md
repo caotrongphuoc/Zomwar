@@ -36,7 +36,7 @@ You can also click the **Star** button next to **Fork** to support the author.
 ### 3. Create the fork
 
 <p align="center">
-  <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_create_fork.png.png" />
+  <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_create_fork.png" />
 </p>
 
 > **Note:**
