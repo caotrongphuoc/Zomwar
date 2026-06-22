@@ -401,7 +401,7 @@ find application/sources/app -type f \( -name "*.cpp" -o -name "*.h" \) \
 </table>
 <p align="center"><strong><em>Figure 9:</em></strong> Comparison before and after formatting with the shortcut</p>
 
-**Step 4.** Turn on `formatOnSave` so the editor formats the file on every save, making sure no code with stale formatting gets committed.
+**Step 4.** Turn on `format On Save` so the editor formats the file on every save, making sure no code with stale formatting gets committed.
 
 <table align="center">
   <tr>
