@@ -46,7 +46,7 @@ You can also click the **Star** button next to **Fork** to support the author.
 Once the fork is created, GitHub redirects you to the new repository — this is the "skeleton" you will use to develop and complete your game:
 
 <p align="center">
-  <img width="1338" height="640" alt="repo-ak" src="resources/images/guide-getting-started/getting_started_repo_after_fork.png" />
+  <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_rename_repo_for_game.png" />
 </p>
 
 ---
