@@ -221,10 +221,6 @@ If you have any questions, suggestions, or feedback about this project or firmwa
   <img src="https://img.shields.io/badge/LinkedIn-Cao%20Trong%20Phuoc-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
-<a href="mailto:caotrongphuoc@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-caotrongphuoc%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-
 <p align="center">
   <i>Happy coding, and may you build some truly fun games!</i>
 </p>
