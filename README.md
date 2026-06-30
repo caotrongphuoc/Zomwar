@@ -1,3 +1,5 @@
+![Views](https://komarev.com/ghpvc/?username=zomwar-game&label=REPO+VIEWS&color=green&style=flat-square)
+
 # Zomwar - Game built on AK Embedded Base Kit
 
 <center><img width="3353" height="1890" alt="CODING GAME ZOMWAR" src="resources/images/screens/banner_game_zomwar.gif" />
