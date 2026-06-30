@@ -1,6 +1,6 @@
 <div align="center">
   
-![Repo Traffic](https://komarev.com/ghpvc/?username=zomwar-game&label=REPO+TRAFFIC&color=blue&style=flat-square)
+![Repo Traffic](https://komarev.com/ghpvc/?username=zomwar-game&label=Repo+Traffic&color=blue&style=flat-square)
 
 </div>
 
