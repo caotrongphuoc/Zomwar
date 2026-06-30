@@ -1,4 +1,4 @@
-![Repo Traffic](https://komarev.com/ghpvc/?username=zomwar-game&label=REPO+VIEWS&color=blue&style=flat-square)
+![Repo Traffic](https://komarev.com/ghpvc/?username=zomwar-game&label=REPO+TRAFFIC&color=blue&style=flat-square)
 
 # Zomwar - Game built on AK Embedded Base Kit
 
