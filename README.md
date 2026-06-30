@@ -1,5 +1,7 @@
 <div align="center">
+  
 ![Repo Traffic](https://komarev.com/ghpvc/?username=zomwar-game&label=REPO+TRAFFIC&color=blue&style=flat-square)
+
 </div>
 
 # Zomwar - Game built on AK Embedded Base Kit
