@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="dQ4a3gaBCpwtiKXcyfk0">
+    <mxGraphModel dx="2046" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TlLYpQPOEVSk9Y1_dFUu-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;direction=south;" value="Bed room 1" vertex="1">
+          <mxGeometry height="400" width="480" x="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TlLYpQPOEVSk9Y1_dFUu-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;direction=south;" value="Hành lang" vertex="1">
+          <mxGeometry height="400" width="200" x="520" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="TlLYpQPOEVSk9Y1_dFUu-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="bedroom 2" vertex="1">
+          <mxGeometry height="280" width="480" x="240" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="TlLYpQPOEVSk9Y1_dFUu-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Toilet" vertex="1">
+          <mxGeometry height="200" width="280" x="240" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="TlLYpQPOEVSk9Y1_dFUu-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="cầu thang đi lên" vertex="1">
+          <mxGeometry height="100" width="280" x="240" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="TlLYpQPOEVSk9Y1_dFUu-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="cầu thang đi xuống" vertex="1">
+          <mxGeometry height="100" width="280" x="240" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="sAxSc52PK20HSKJvHwT7-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&#xa;  &#xa;    &#xa;      &#xa;        &#xa;        &#xa;                &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;      &#xa;    &#xa;  &#xa;" vertex="1">
+          <mxGeometry height="730" width="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
