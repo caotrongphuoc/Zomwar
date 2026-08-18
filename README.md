@@ -4,6 +4,13 @@
 
 </div>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/language-C%2B%2B-red?style=flat-square&logo=c%2B%2B" alt="Language">
+  <img src="https://img.shields.io/badge/mcu-STM32L151-red?style=flat-square" alt="MCU">
+  <img src="https://img.shields.io/badge/framework-Active%20Kernel-red?style=flat-square" alt="Framework">
+  <img src="https://img.shields.io/badge/hardware-AK%20Base%20Kit-red?style=flat-square" alt="Hardware">
+</p>
+
 # Zomwar - Game built on AK Embedded Base Kit
 
 <center><img width="1280" height="640" alt="Zomwar" src="resources/images/screens/banner_game_zomwar_ver2.gif" />
