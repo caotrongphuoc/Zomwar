@@ -26,8 +26,8 @@ Gunner owns the player position (`gunner`).
 
 **Per-tick.** Each `ZW_GAME_TIME_TICK` the screen translates the latched `gunner_dir` into `ZW_GAME_GUNNER_UP` / `ZW_GAME_GUNNER_DOWN` (when non-zero) and always posts `ZW_GAME_GUNNER_UPDATE`.
 
-- `UP` / `DOWN` — moves `gunner.y` by `GUNNER_STEP_AXIS_Y`, clamped to `GUNNER_AXIS_Y_MIN..GUNNER_AXIS_Y_MAX`.
-- `UPDATE` — clears the recoil frame by resetting `gunner.action_image` from `2` back to `1` (the recoil frame is raised by the Bullet task on `ZW_GAME_BULLET_SHOOT`).
+- `UP` / `DOWN`: moves `gunner.y` by `GUNNER_STEP_AXIS_Y`, clamped to `GUNNER_AXIS_Y_MIN..GUNNER_AXIS_Y_MAX`.
+- `UPDATE`: clears the recoil frame by resetting `gunner.action_image` from `2` back to `1` (the recoil frame is raised by the Bullet task on `ZW_GAME_BULLET_SHOOT`).
 
 **Reset.** `ZW_GAME_GUNNER_RESET` re-parks the gunner and sets `visible = BLACK`.
 
@@ -64,17 +64,17 @@ sequenceDiagram
         alt gunner_dir == UP
             Scr-)Gun: ZW_GAME_GUNNER_UP
             activate Gun
-            Note right of Gun: gunner.y -= GUNNER_STEP_AXIS_Y<br/>clamp ≥ GUNNER_AXIS_Y_MIN
+            Note right of Gun: gunner.y -= GUNNER_STEP_AXIS_Y<br/>clamp >= GUNNER_AXIS_Y_MIN
             deactivate Gun
         else gunner_dir == DOWN
             Scr-)Gun: ZW_GAME_GUNNER_DOWN
             activate Gun
-            Note right of Gun: gunner.y += GUNNER_STEP_AXIS_Y<br/>clamp ≤ GUNNER_AXIS_Y_MAX
+            Note right of Gun: gunner.y += GUNNER_STEP_AXIS_Y<br/>clamp <= GUNNER_AXIS_Y_MAX
             deactivate Gun
         end
         Scr-)Gun: ZW_GAME_GUNNER_UPDATE
         activate Gun
-        Note right of Gun: clear recoil frame (2 → 1)
+        Note right of Gun: clear recoil frame (2 -> 1)
         deactivate Gun
     end
 
@@ -123,7 +123,7 @@ sequenceDiagram
     end
     deactivate Scr
     activate Bul
-    Note right of Bul: pick first slot with visible≠WHITE<br/>visible=WHITE, x=gunner.x+BULLET_SPAWN_OFFSET_X, y=gunner.y-BULLET_SPAWN_OFFSET_Y<br/>gunner.action_image = 2 — recoil frame, shared global owned by Gunner
+    Note right of Bul: pick first slot with visible!=WHITE<br/>visible=WHITE, x=gunner.x+BULLET_SPAWN_OFFSET_X, y=gunner.y-BULLET_SPAWN_OFFSET_Y<br/>gunner.action_image = 2 (recoil frame, shared global owned by Gunner)
     Bul->>+Bz: BUZZER_PlaySound(CLICK)
     Bz-->>-Bul: 
     deactivate Bul
@@ -133,7 +133,7 @@ sequenceDiagram
         activate Bul
         loop for each visible bullet
             Note right of Bul: x += BULLET_STEP_AXIS_X
-            alt x ≥ BULLET_MAX_AXIS_X
+            alt x >= BULLET_MAX_AXIS_X
                 Note right of Bul: visible=BLACK, x=0
             end
         end
@@ -151,14 +151,14 @@ sequenceDiagram
 
 ## IV. Zombie Object Sequence
 
-Zombie owns the horde state — the `zombie[ZOMBIE_NUMBER]` array and `zw_game_zombie_speed`.
+Zombie owns the horde state: the `zombie[ZOMBIE_NUMBER]` array and `zw_game_zombie_speed`.
 
 **Setup.** `ZW_GAME_ZOMBIE_SETUP` reads `zw_game_zombie_speed` from `settingsetup.zombie_speed`, hides every slot in `zombie[]`, then spawns the first `ZOMBIE_INIT_NUMBER` zombies at random `(x, y)` inside the right margin (`x` in `ZOMBIE_SPAWN_X_MIN..MAX`, `y` in `ZOMBIE_Y_MIN..MAX`).
 
 **Per-tick.** Each `ZW_GAME_TIME_TICK` the screen task posts `ZW_GAME_ZOMBIE_RUN` followed by `ZW_GAME_ZOMBIE_DETONATOR`.
 
-- `RUN` — each visible zombie either rises one pixel up (when it was spawned from a tombstone via `zw_game_zombie_spawn_from_tombstone()` and `rise_ticks > 0`; when `rise_ticks` reaches zero, `rising` is cleared and `zigzag_timer` is re-rolled), or steps left by `zw_game_zombie_speed` (clamped at `-ZOMBIE_MIN_LEFT_OFFSET`), applies a vertical zigzag (`dy` re-rolled to `-1..+1` every `zigzag_timer` ticks, clamped to `ZOMBIE_Y_MIN..ZOMBIE_Y_MAX` and reset to `0` on clamp), and cycles `action_image` through frames `1→2→3`. After moving, the task tops the alive count back up to `ZOMBIE_INIT_NUMBER` by re-spawning hidden slots.
-- `DETONATOR` — for every visible non-rising zombie it walks `bullet[]`, calls `zw_game_zombie_check_hit()`, and on a hit hides the bullet (`visible = BLACK`, `x = 0`), calls `zw_game_bang_spawn()`, adds `10` to `zw_game_score`, plays `BUZZER_SOUND_BANG`, and hides the zombie.
+- `RUN`: each visible zombie either rises one pixel up (when it was spawned from a tombstone via `zw_game_zombie_spawn_from_tombstone()` and `rise_ticks > 0`; when `rise_ticks` reaches zero, `rising` is cleared and `zigzag_timer` is re-rolled), or steps left by `zw_game_zombie_speed` (clamped at `-ZOMBIE_MIN_LEFT_OFFSET`), applies a vertical zigzag (`dy` re-rolled to `-1..+1` every `zigzag_timer` ticks, clamped to `ZOMBIE_Y_MIN..ZOMBIE_Y_MAX` and reset to `0` on clamp), and cycles `action_image` through frames `1->2->3`. After moving, the task tops the alive count back up to `ZOMBIE_INIT_NUMBER` by re-spawning hidden slots.
+- `DETONATOR`: for every visible non-rising zombie it walks `bullet[]`, calls `zw_game_zombie_check_hit()`, and on a hit hides the bullet (`visible = BLACK`, `x = 0`), calls `zw_game_bang_spawn()`, adds `10` to `zw_game_score`, plays `BUZZER_SOUND_BANG`, and hides the zombie.
 
 **Cross-task.** `ZW_GAME_ZOMBIE_WAVE_SPAWN` (posted from the Border task on level-up) increments `zw_game_zombie_speed` up to `ZOMBIE_SPEED_MAX` and respawns up to `ZOMBIE_WAVE_SPAWN` hidden slots.
 
@@ -186,9 +186,9 @@ sequenceDiagram
         activate Zmb
         loop for each visible zombie
             alt rising
-                Note right of Zmb: y--, rise_ticks--<br/>if ticks reach 0 then rising=false and re-roll zigzag_timer<br/>cycle action_image 1→2→3
+                Note right of Zmb: y--, rise_ticks--<br/>if ticks reach 0 then rising=false and re-roll zigzag_timer<br/>cycle action_image 1->2->3
             else moving left
-                Note right of Zmb: x -= speed (clamp at -ZOMBIE_MIN_LEFT_OFFSET)<br/>y += dy, clamp to Y_MIN..Y_MAX, dy=0 on clamp<br/>if zigzag_timer hits 0, re-roll dy in -1..+1<br/>cycle action_image 1→2→3
+                Note right of Zmb: x -= speed (clamp at -ZOMBIE_MIN_LEFT_OFFSET)<br/>y += dy, clamp to Y_MIN..Y_MAX, dy=0 on clamp<br/>if zigzag_timer hits 0, re-roll dy in -1..+1<br/>cycle action_image 1->2->3
             end
         end
         opt alive less than ZOMBIE_INIT_NUMBER
@@ -236,8 +236,8 @@ Car owns the lawnmower-style rescue cars (`car[CAR_LANE_NUMBER]`, one slot per l
 
 **Per-tick.** Each `ZW_GAME_TIME_TICK` the screen task posts `ZW_GAME_CAR_RUN` then `ZW_GAME_CAR_HIT`.
 
-- `RUN` — first walks `zombie[]`: a visible zombie that reaches the left edge (`x <= -ZOMBIE_MIN_LEFT_OFFSET`) wakes the nearest non-running car within `CAR_HIT_RANGE_Y` via `zw_game_car_find_nearest()` — that car starts running, `zw_game_bang_spawn()` plays, `zw_game_score += 10`, `BUZZER_SOUND_BANG` is played, and the zombie is hidden; a zombie still on screen whose nearest car overlaps it (`zw_game_car_check_hit`) wakes that car too (kill deferred to `HIT`). After the activation pass, every visible running car slides right by `CAR_SPEED`, cycles `action_image` through `1→2→3`, and despawns (`visible = false`, `running = false`) once `x > LCD_WIDTH`.
-- `HIT` — every visible running car walks `zombie[]` and for each overlap calls `zw_game_bang_spawn()`, adds `10` to `zw_game_score`, plays `BUZZER_SOUND_BANG`, and hides the zombie.
+- `RUN`: first walks `zombie[]`: a visible zombie that reaches the left edge (`x <= -ZOMBIE_MIN_LEFT_OFFSET`) wakes the nearest non-running car within `CAR_HIT_RANGE_Y` via `zw_game_car_find_nearest()`, that car starts running, `zw_game_bang_spawn()` plays, `zw_game_score += 10`, `BUZZER_SOUND_BANG` is played, and the zombie is hidden; a zombie still on screen whose nearest car overlaps it (`zw_game_car_check_hit`) wakes that car too (kill deferred to `HIT`). After the activation pass, every visible running car slides right by `CAR_SPEED`, cycles `action_image` through `1->2->3`, and despawns (`visible = false`, `running = false`) once `x > LCD_WIDTH`.
+- `HIT`: every visible running car walks `zombie[]` and for each overlap calls `zw_game_bang_spawn()`, adds `10` to `zw_game_score`, plays `BUZZER_SOUND_BANG`, and hides the zombie.
 
 **Reset.** `ZW_GAME_CAR_RESET` re-parks every lane and clears both `visible` and `running`.
 
@@ -260,7 +260,7 @@ sequenceDiagram
     loop Each ZW_GAME_TIME_TICK
         Scr-)Car: ZW_GAME_CAR_RUN
         activate Car
-        Note right of Car: Phase 1 — activation pass
+        Note right of Car: Phase 1 (activation pass)
         loop for each visible zombie z
             alt z reached left edge (z.x <= -ZOMBIE_MIN_LEFT_OFFSET)
                 Note right of Car: m = zw_game_car_find_nearest(z.y)
@@ -276,9 +276,9 @@ sequenceDiagram
                 end
             end
         end
-        Note right of Car: Phase 2 — advance running cars
+        Note right of Car: Phase 2 (advance running cars)
         loop for each visible running car c
-            Note right of Car: c.x += CAR_SPEED<br/>cycle action_image 1→2→3
+            Note right of Car: c.x += CAR_SPEED<br/>cycle action_image 1->2->3
             opt c reaches right edge (c.x > LCD_WIDTH)
                 Note right of Car: visible=false, running=false
             end
@@ -314,7 +314,7 @@ sequenceDiagram
 
 ## VI. Tombstone Object Sequence
 
-Tombstone owns the `tombstone[TOMBSTONE_NUMBER]` array — 2 tombstones per lane (group 1 at `x = TOMBSTONE_LANE_1_X_MIN..MAX`, group 2 at `x = TOMBSTONE_LANE_2_X_MIN..MAX`).
+Tombstone owns the `tombstone[TOMBSTONE_NUMBER]` array, 2 tombstones per lane (group 1 at `x = TOMBSTONE_LANE_1_X_MIN..MAX`, group 2 at `x = TOMBSTONE_LANE_2_X_MIN..MAX`).
 
 **Setup.** `ZW_GAME_TOMBSTONE_SETUP` arms `tombstone_spawn_timer = TOMBSTONE_SPAWN_INTERVAL` and, for each lane, sets `active` from the i-th bit of `settingsetup.tombstone_lane_1` (group 1) and `settingsetup.tombstone_lane_2` (group 2).
 
@@ -375,13 +375,13 @@ sequenceDiagram
 
 ## VII. Bang Object Sequence
 
-Bang owns the `bang[BANG_NUMBER]` array of short-lived explosion sprites that play whenever a zombie is killed. It exposes no spawn signal — Zombie (on a bullet hit, `zw_game_zombie.cpp`) and Car (on car activation at the screen edge and on a running car overlapping a zombie, `zw_game_car.cpp`) call `zw_game_bang_spawn(x, y)` directly.
+Bang owns the `bang[BANG_NUMBER]` array of short-lived explosion sprites that play whenever a zombie is killed. It exposes no spawn signal. Zombie (on a bullet hit, `zw_game_zombie.cpp`) and Car (on car activation at the screen edge and on a running car overlapping a zombie, `zw_game_car.cpp`) call `zw_game_bang_spawn(x, y)` directly.
 
 **Setup.** `ZW_GAME_BANG_SETUP` calls `zw_game_bang_reset_all()`, clearing every slot to `visible = BLACK`, `action_image = 1`.
 
-**Per-tick.** Each `ZW_GAME_TIME_TICK` the screen task posts `ZW_GAME_BANG_UPDATE`: for every visible slot, if `action_image >= 3` the slot is retired (`action_image = 1`, `visible = BLACK`); otherwise `action_image` is incremented. Each explosion plays frames `1 → 2 → 3` over three ticks (~300 ms at the 100 ms tick interval) before its slot becomes free for the next hit.
+**Per-tick.** Each `ZW_GAME_TIME_TICK` the screen task posts `ZW_GAME_BANG_UPDATE`: for every visible slot, if `action_image >= 3` the slot is retired (`action_image = 1`, `visible = BLACK`); otherwise `action_image` is incremented. Each explosion plays frames `1 -> 2 -> 3` over three ticks (~300 ms at the 100 ms tick interval) before its slot becomes free for the next hit.
 
-**Cross-task.** `zw_game_bang_spawn(x, y)` walks `bang[]`, picks the first slot whose `visible != WHITE`, and writes `visible = WHITE`, `x = max(x + BANG_SPAWN_OFFSET_X, 0)`, `y = max(y - BANG_SPAWN_OFFSET_Y, 0)`, `action_image = 1` — the small offset centers the explosion bitmap over the zombie hit point.
+**Cross-task.** `zw_game_bang_spawn(x, y)` walks `bang[]`, picks the first slot whose `visible != WHITE`, and writes `visible = WHITE`, `x = max(x + BANG_SPAWN_OFFSET_X, 0)`, `y = max(y - BANG_SPAWN_OFFSET_Y, 0)`, `action_image = 1`. The small offset centers the explosion bitmap over the zombie hit point.
 
 **Reset.** `ZW_GAME_BANG_RESET` runs the same `zw_game_bang_reset_all()` as setup.
 
@@ -439,15 +439,15 @@ sequenceDiagram
 
 ## VIII. Border Object Sequence
 
-Border owns the game's progression state — `zw_game_score`, `wave_last_score`, `wave_level`, and the wave-warning latch (`wave_warning_active`, `wave_warning_timer`) — and is the sole arbiter of game over.
+Border owns the game's progression state (`zw_game_score`, `wave_last_score`, `wave_level`, and the wave-warning latch `wave_warning_active`, `wave_warning_timer`) and is the sole arbiter of game over.
 
 **Setup.** `ZW_GAME_BORDER_SETUP` calls `zw_game_border_clear()`, zeroing the score, last-wave score, wave level, warning timer, and warning flag.
 
 **Per-tick.** Each `ZW_GAME_TIME_TICK` the screen task posts three Border signals in order: `ZW_GAME_BORDER_CHECK_GAME_OVER`, `ZW_GAME_BORDER_CHECK_WAVE`, then `ZW_GAME_BORDER_LEVEL_UP`.
 
-- `ZW_GAME_BORDER_CHECK_GAME_OVER` — walks `zombie[]` and, for every visible zombie that has reached the left edge (`x <= -ZOMBIE_MIN_LEFT_OFFSET`), asks the Car task via `zw_game_car_find_nearest(zombie[i].y)` whether any rescue car is in range; if none is found for any such zombie, Border posts `ZW_GAME_RESET` to the screen task (`AC_TASK_DISPLAY_ID`) and stops scanning.
-- `ZW_GAME_BORDER_CHECK_WAVE` — arms a new wave when the player crosses the next score threshold: if no warning is currently active and `zw_game_score >= wave_last_score + BORDER_WAVE_SCORE_INTERVAL` (200), it sets `wave_warning_active = true` and loads `wave_warning_timer = BORDER_WARNING_BLINK_DURATION` (30 ticks ≈ 3 s). The screen task uses that timer to blink the warning bitmap at `BORDER_WARNING_BLINK_RATE` and to render `wave_level` (`scr_game_zomwar.cpp`).
-- `ZW_GAME_BORDER_LEVEL_UP` — runs only while the warning is active: it counts down `wave_warning_timer` by one each tick and, once the timer hits zero, clears the warning, advances `wave_last_score` by `BORDER_WAVE_SCORE_INTERVAL`, increments `wave_level`, and posts `ZW_GAME_ZOMBIE_WAVE_SPAWN` to the Zombie task so the next wave spawns and the zombie speed steps up.
+- `ZW_GAME_BORDER_CHECK_GAME_OVER`: walks `zombie[]` and, for every visible zombie that has reached the left edge (`x <= -ZOMBIE_MIN_LEFT_OFFSET`), asks the Car task via `zw_game_car_find_nearest(zombie[i].y)` whether any rescue car is in range; if none is found for any such zombie, Border posts `ZW_GAME_RESET` to the screen task (`AC_TASK_DISPLAY_ID`) and stops scanning.
+- `ZW_GAME_BORDER_CHECK_WAVE`: arms a new wave when the player crosses the next score threshold: if no warning is currently active and `zw_game_score >= wave_last_score + BORDER_WAVE_SCORE_INTERVAL` (200), it sets `wave_warning_active = true` and loads `wave_warning_timer = BORDER_WARNING_BLINK_DURATION` (30 ticks, about 3 s). The screen task uses that timer to blink the warning bitmap at `BORDER_WARNING_BLINK_RATE` and to render `wave_level` (`scr_game_zomwar.cpp`).
+- `ZW_GAME_BORDER_LEVEL_UP`: runs only while the warning is active: it counts down `wave_warning_timer` by one each tick and, once the timer hits zero, clears the warning, advances `wave_last_score` by `BORDER_WAVE_SCORE_INTERVAL`, increments `wave_level`, and posts `ZW_GAME_ZOMBIE_WAVE_SPAWN` to the Zombie task so the next wave spawns and the zombie speed steps up.
 
 **Reset.** `ZW_GAME_BORDER_RESET` runs the same `zw_game_border_clear()` as setup.
 
