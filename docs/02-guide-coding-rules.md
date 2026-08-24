@@ -1,6 +1,6 @@
 <h1 align="center">Coding rules and style guide</h1>
 
-This document defines the naming conventions, code style, commit message format, and document naming conventions used in the project, along with instructions for installing and using `clang-format`. The goal is to make sure code contributed by team members stays consistent in form and easy to track through search tools, code review, and version control. These are the takeaways from finishing the Zomwar game — feel free to refer to them and apply whatever fits.
+This document defines the naming conventions, code style, commit message format, and document naming conventions used in the project, along with instructions for installing and using `clang-format`. The goal is to make sure code contributed by team members stays consistent in form and easy to track through search tools, code review, and version control. These are the takeaways from finishing the Zomwar game. Feel free to refer to them and apply whatever fits.
 
 ---
 
@@ -80,7 +80,7 @@ Use `UPPER_SNAKE_CASE` for names. Always wrap numeric values in parentheses to a
 
 **Mandatory rule: a macro that belongs to an object MUST carry that object's name as a prefix.**
 
-Pattern: `<OBJECT>_<PROPERTY>` or `<OBJECT>_<ACTION>` — the object always comes first. Reading the macro name tells you immediately which module it belongs to, and grepping by object name returns every constant of that module.
+Pattern: `<OBJECT>_<PROPERTY>` or `<OBJECT>_<ACTION>`. The object always comes first. Reading the macro name tells you immediately which module it belongs to, and grepping by object name returns every constant of that module.
 
 | Constant type | Correct form |
 |---|---|
@@ -118,7 +118,7 @@ Examples done right:
 #define BORDER_SIZE_BITMAP_WARNING_Y  (14)
 ```
 
-**Exception — system / project level macros:** macros belonging to the whole game (not tied to any specific object) use the project prefix `ZW_GAME_*`:
+**Exception (system / project level macros):** macros belonging to the whole game (not tied to any specific object) use the project prefix `ZW_GAME_*`:
 
 ```cpp
 #define ZW_GAME_TIME_TICK_INTERVAL (100)
@@ -129,7 +129,7 @@ Group related constants in the right module header (`zw_game_bullet.h` holds bul
 
 ### 5. Signal (enum values)
 
-Signals are the **public contract** between tasks. Always use the full prefix — no abbreviations, not in comments, documentation, or sequence diagrams.
+Signals are the **public contract** between tasks. Always use the full prefix; no abbreviations, not in comments, documentation, or sequence diagrams.
 
 | Pattern | Applied to | Example |
 |---|---|---|
@@ -249,12 +249,12 @@ What the non-default settings do:
 |---|---|
 | `UseTab: ForIndentation`, `IndentWidth: 4`, `TabWidth: 4` | Tabs are used only for indentation, not alignment. One tab equals 4 columns. |
 | `ColumnLimit: 0` | No automatic line wrapping. The author decides where to break a line. |
-| `BreakBeforeBraces: Allman` | The `{` always sits on its own line — applies to `if`, `for`, and function bodies. |
+| `BreakBeforeBraces: Allman` | The `{` always sits on its own line, applies to `if`, `for`, and function bodies. |
 | `AllowShort*OnASingleLine: false` | One statement per line, even for short `if` statements or empty functions. |
 | `PointerAlignment: Left` | Write `int* p`, not `int *p`. |
 | `SpaceBeforeParens: ControlStatements` | `if (x)`, `for (...)` have a space; `func(x)` does not. |
 | `IndentCaseLabels: false` | `case` labels sit at the same indent level as `switch`. |
-| `SortIncludes: false` | Include order is meaningful (BSP → framework → project) and must not be sorted automatically. |
+| `SortIncludes: false` | Include order is meaningful (BSP -> framework -> project) and must not be sorted automatically. |
 
 ---
 
@@ -353,7 +353,7 @@ find application/sources/app -type f \( -name "*.cpp" -o -name "*.h" \) \
 
 ### 2. VSCode integration
 
-**Step 1.** Install the **C/C++** extension (Microsoft) — it ships with `clang-format` and automatically picks up the `.clang-format` file in the repo.
+**Step 1.** Install the **C/C++** extension (Microsoft). It ships with `clang-format` and automatically picks up the `.clang-format` file in the repo.
 
 <table align="center">
   <tr>
@@ -450,7 +450,7 @@ When you only need to stage specific files, replace `git add .` with `git add <p
 | Tag | When to use |
 |---|---|
 | `[ADD]` | Adding a new file, feature, asset, or document |
-| `[UPDATE]` | Updating existing code — refactor, rename, tweak logic, bump version |
+| `[UPDATE]` | Updating existing code (refactor, rename, tweak logic, bump version) |
 | `[FIX]` | Fixing an existing bug, build error, or formatting error |
 | `[REMOVE]` | Removing a file, feature, or dead code |
 | `[DOC]` | Documentation-only changes (`docs/`, `README.md`, large comment blocks) |
@@ -460,7 +460,7 @@ When you only need to stage specific files, replace `git add .` with `git add <p
 
 - Tag fully uppercased inside `[]`, followed by exactly one space, then the description.
 - Description in lowercase, imperative mood (`add`, `fix`, `rename`, `move`...), no trailing period.
-- Keep the length around 70 characters — if longer, shorten it or move the details into the commit body.
+- Keep the length around 70 characters. If longer, shorten it or move the details into the commit body.
 - When the change touches a specific module / signal / file, name it directly so the history is easy to grep.
 
 ### 4. Good examples
@@ -494,7 +494,7 @@ Files in `docs/` follow the format `<NN>-<category>-<topic>.md`:
 
 | Component | Convention | Example |
 |---|---|---|
-| `NN` | A 2-digit sequence number, starting from `01`. Reflects reading order — guides come first, design docs come after. | `01`, `02`, `03` |
+| `NN` | A 2-digit sequence number, starting from `01`. Reflects reading order: guides come first, design docs come after. | `01`, `02`, `03` |
 | `category` | Document category. Only use predefined values; do not add new categories. | `guide`, `design` |
 | `topic` | Main topic, written in `kebab-case` (lowercase, words separated by `-`). | `getting-started`, `coding-rules`, `sequence-object` |
 
@@ -526,10 +526,10 @@ A few important notes:
 
 ## VII. References
 
-- [Naming convention — Multi-word identifiers (Wikipedia)](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers) — definitions of `snake_case`, `SCREAMING_SNAKE_CASE`, and `kebab-case` used in Sections I and VI.
-- [Clang-Format — Configurable Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options) — describes every key in the `.clang-format` file from Section II.
-- [LLVM Coding Standards — Source Code Formatting](https://llvm.org/docs/CodingStandards.html#source-code-formatting) — base style inherited via `BasedOnStyle: LLVM` in Section II.
-- [Pro Git — Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) — the `git add` / `git commit` / `git push` workflow used in Section V.
+- [Naming convention: Multi-word identifiers (Wikipedia)](https://en.wikipedia.org/wiki/Naming_convention_(programming)#Multiple-word_identifiers): definitions of `snake_case`, `SCREAMING_SNAKE_CASE`, and `kebab-case` used in Sections I and VI.
+- [Clang-Format: Configurable Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options): describes every key in the `.clang-format` file from Section II.
+- [LLVM Coding Standards: Source Code Formatting](https://llvm.org/docs/CodingStandards.html#source-code-formatting): base style inherited via `BasedOnStyle: LLVM` in Section II.
+- [Pro Git: Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository): the `git add` / `git commit` / `git push` workflow used in Section V.
 
 ---
 
