@@ -64,7 +64,9 @@ void view_scr_game_setting()
 			for (uint8_t i = 0; i < 5; i++)
 			{
 				if ((settingdata.num_car >> i) & 1)
+				{
 					car_count++;
+				}
 			}
 			view_render.setCursor(2, text_y);
 			view_render.print("Cars");
@@ -80,9 +82,13 @@ void view_scr_game_setting()
 			for (uint8_t i = 0; i < 5; i++)
 			{
 				if ((settingdata.tombstone_lane_1 >> i) & 1)
+				{
 					total_t++;
+				}
 				if ((settingdata.tombstone_lane_2 >> i) & 1)
+				{
 					total_t++;
+				}
 			}
 			view_render.setCursor(2, text_y);
 			view_render.print("Tombstones");

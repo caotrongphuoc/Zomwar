@@ -30,9 +30,13 @@ static uint8_t get_lane_count(uint8_t i)
 {
 	uint8_t c = 0;
 	if ((settingdata.tombstone_lane_1 >> i) & 1)
+	{
 		c++;
+	}
 	if ((settingdata.tombstone_lane_2 >> i) & 1)
+	{
 		c++;
+	}
 	return c;
 }
 
@@ -114,9 +118,13 @@ void scr_game_setting_tombstone_handle(ak_msg_t* msg)
 			settingdata.tombstone_lane_2 &= ~(1 << idx);
 			/* Set bits to new value */
 			if (cur >= 1)
+			{
 				settingdata.tombstone_lane_1 |= (1 << idx);
+			}
 			if (cur == 2)
+			{
 				settingdata.tombstone_lane_2 |= (1 << idx);
+			}
 			BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 		}
 		else

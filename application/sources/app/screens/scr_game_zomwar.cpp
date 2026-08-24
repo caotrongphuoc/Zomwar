@@ -50,10 +50,14 @@ view_screen_t scr_game_zomwar = {
 void zw_game_gunner_display()
 {
 	if (gunner.visible != WHITE)
+	{
 		return;
+	}
 	const unsigned char* frame = bitmap_gunner_I;
 	if (gunner.action_image == 2)
+	{
 		frame = bitmap_gunner_II;
+	}
 	view_render.drawBitmap(gunner.x, gunner.y - 10, frame, GUNNER_SIZE_BITMAP_X, GUNNER_SIZE_BITMAP_Y, WHITE);
 }
 
@@ -62,7 +66,9 @@ void zw_game_bullet_display()
 	for (uint8_t i = 0; i < BULLET_NUMBER; i++)
 	{
 		if (bullet[i].visible != WHITE)
+		{
 			continue;
+		}
 		view_render.drawBitmap(bullet[i].x, bullet[i].y, bitmap_bullet, BULLET_SIZE_BITMAP_X, BULLET_SIZE_BITMAP_Y, WHITE);
 	}
 }
@@ -72,12 +78,18 @@ void zw_game_zombie_display()
 	for (uint8_t i = 0; i < ZOMBIE_NUMBER; i++)
 	{
 		if (zombie[i].visible != WHITE)
+		{
 			continue;
+		}
 		const unsigned char* frame = bitmap_zombie_I;
 		if (zombie[i].action_image == 2)
+		{
 			frame = bitmap_zombie_II;
+		}
 		else if (zombie[i].action_image == 3)
+		{
 			frame = bitmap_zombie_III;
+		}
 		view_render.drawBitmap(zombie[i].x, zombie[i].y, frame, ZOMBIE_SIZE_BITMAP_X, ZOMBIE_SIZE_BITMAP_Y, WHITE);
 	}
 }
@@ -87,12 +99,18 @@ void zw_game_car_display()
 	for (uint8_t i = 0; i < CAR_LANE_NUMBER; i++)
 	{
 		if (car[i].visible != WHITE)
+		{
 			continue;
+		}
 		const unsigned char* frame = bitmap_car_I;
 		if (car[i].action_image == 2)
+		{
 			frame = bitmap_car_II;
+		}
 		else if (car[i].action_image == 3)
+		{
 			frame = bitmap_car_III;
+		}
 		view_render.drawBitmap(car[i].x, car[i].y, frame, CAR_SIZE_BITMAP_X, CAR_SIZE_BITMAP_Y, WHITE);
 	}
 }
@@ -102,7 +120,9 @@ void zw_game_tombstone_display()
 	for (uint8_t i = 0; i < TOMBSTONE_NUMBER; i++)
 	{
 		if (!tombstone[i].active)
+		{
 			continue;
+		}
 		view_render.drawBitmap(tombstone[i].x, lane_y[tombstone[i].lane], bitmap_tombstone, TOMBSTONE_SIZE_BITMAP_X, TOMBSTONE_SIZE_BITMAP_Y, WHITE);
 	}
 }
@@ -112,7 +132,9 @@ void zw_game_bang_display()
 	for (uint8_t i = 0; i < BANG_NUMBER; i++)
 	{
 		if (bang[i].visible != WHITE)
+		{
 			continue;
+		}
 		const unsigned char* frame = bitmap_bang_I;
 		uint8_t w = BANG_SIZE_BITMAP_I_X;
 		uint8_t h = BANG_SIZE_BITMAP_I_Y;
@@ -219,11 +241,17 @@ void scr_game_zomwar_handle(ak_msg_t* msg)
 	{
 		APP_DBG_SIG("ZW_GAME_TIME_TICK\n");
 		if (zw_game_state != GAME_PLAY)
+		{
 			break;
+		}
 		if (gunner_dir == GUNNER_DIR_UP)
+		{
 			task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_UP);
+		}
 		else if (gunner_dir == GUNNER_DIR_DOWN)
+		{
 			task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_DOWN);
+		}
 		task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_UPDATE);
 		task_post_pure_msg(ZW_GAME_BULLET_ID, ZW_GAME_BULLET_RUN);
 		task_post_pure_msg(ZW_GAME_ZOMBIE_ID, ZW_GAME_ZOMBIE_RUN);
@@ -242,7 +270,9 @@ void scr_game_zomwar_handle(ak_msg_t* msg)
 	{
 		APP_DBG_SIG("ZW_GAME_RESET\n");
 		if (zw_game_state != GAME_PLAY)
+		{
 			break;
+		}
 		timer_remove_attr(AC_TASK_DISPLAY_ID, ZW_GAME_TIME_TICK);
 		task_post_pure_msg(ZW_GAME_GUNNER_ID, ZW_GAME_GUNNER_RESET);
 		task_post_pure_msg(ZW_GAME_BULLET_ID, ZW_GAME_BULLET_RESET);
@@ -272,7 +302,9 @@ void scr_game_zomwar_handle(ak_msg_t* msg)
 	{
 		APP_DBG_SIG("ZW_GAME BTN_UP_RELEASED\n");
 		if (gunner_dir == GUNNER_DIR_UP)
+		{
 			gunner_dir = GUNNER_DIR_NONE;
+		}
 	}
 	break;
 
@@ -287,7 +319,9 @@ void scr_game_zomwar_handle(ak_msg_t* msg)
 	{
 		APP_DBG_SIG("ZW_GAME BTN_DOWN_RELEASED\n");
 		if (gunner_dir == GUNNER_DIR_DOWN)
+		{
 			gunner_dir = GUNNER_DIR_NONE;
+		}
 	}
 	break;
 
