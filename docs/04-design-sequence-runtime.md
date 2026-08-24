@@ -386,11 +386,11 @@ In Zomwar, button callbacks always post `AC_DISPLAY_BUTTON_*` signals to `AC_TAS
 
 | Button | BSP posts to AK | Active screen | Result inside the screen handler |
 |---|---|---|---|
-| MODE Pressed | `AC_DISPLAY_BUTTON_MODE_PRESSED` → `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | If `zw_game_state == GAME_PLAY`: post `ZW_GAME_BULLET_SHOOT` to `ZW_GAME_BULLET_ID` |
-| UP Pressed | `AC_DISPLAY_BUTTON_UP_PRESSED` → `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | `gunner_dir = GUNNER_DIR_UP` (no message posted) |
-| UP Released | `AC_DISPLAY_BUTTON_UP_RELEASED` → `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | If `gunner_dir == GUNNER_DIR_UP`: `gunner_dir = GUNNER_DIR_NONE` |
-| DOWN Pressed | `AC_DISPLAY_BUTTON_DOWN_PRESSED` → `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | `gunner_dir = GUNNER_DIR_DOWN` (no message posted) |
-| DOWN Released | `AC_DISPLAY_BUTTON_DOWN_RELEASED` → `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | If `gunner_dir == GUNNER_DIR_DOWN`: `gunner_dir = GUNNER_DIR_NONE` |
+| MODE Pressed | `AC_DISPLAY_BUTTON_MODE_PRESSED` -> `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | If `zw_game_state == GAME_PLAY`: post `ZW_GAME_BULLET_SHOOT` to `ZW_GAME_BULLET_ID` |
+| UP Pressed | `AC_DISPLAY_BUTTON_UP_PRESSED` -> `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | `gunner_dir = GUNNER_DIR_UP` (no message posted) |
+| UP Released | `AC_DISPLAY_BUTTON_UP_RELEASED` -> `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | If `gunner_dir == GUNNER_DIR_UP`: `gunner_dir = GUNNER_DIR_NONE` |
+| DOWN Pressed | `AC_DISPLAY_BUTTON_DOWN_PRESSED` -> `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | `gunner_dir = GUNNER_DIR_DOWN` (no message posted) |
+| DOWN Released | `AC_DISPLAY_BUTTON_DOWN_RELEASED` -> `AC_TASK_DISPLAY_ID` | `scr_game_zomwar` | If `gunner_dir == GUNNER_DIR_DOWN`: `gunner_dir = GUNNER_DIR_NONE` |
 
 Note: the BSP's MODE callback only posts on `BUTTON_SW_STATE_PRESSED`; there is no `MODE_RELEASED` event. The actual `ZW_GAME_GUNNER_UP`/`DOWN` signals are posted by the screen on every `ZW_GAME_TIME_TICK` based on the latched `gunner_dir`, not by the button callback directly.
 
@@ -409,5 +409,5 @@ Important runtime characteristics:
 - `ZW_GAME_TIME_TICK` can appear between button pressed and released logs because the timer keeps running.
 - Bang has no spawn signal: Zombie's `ZW_GAME_ZOMBIE_DETONATOR` and Car's `ZW_GAME_CAR_RUN`/`ZW_GAME_CAR_HIT` call `zw_game_bang_spawn()` directly to write into `bang[]`. The Bang task only owns the per-tick animation (`ZW_GAME_BANG_UPDATE`).
 - Border crosses task boundaries in two places: it posts `ZW_GAME_ZOMBIE_WAVE_SPAWN` to Zombie on `ZW_GAME_BORDER_LEVEL_UP` (async), and calls `zw_game_car_find_nearest()` synchronously into the Car module on `ZW_GAME_BORDER_CHECK_GAME_OVER` (sync helper, reads `car[]`).
-- Tombstone writes into `zombie[]` via a synchronous helper `zw_game_zombie_spawn_from_tombstone()` during its own `ZW_GAME_TOMBSTONE_SPAWN` tick — it does not post a signal to the Zombie task.
+- Tombstone writes into `zombie[]` via a synchronous helper `zw_game_zombie_spawn_from_tombstone()` during its own `ZW_GAME_TOMBSTONE_SPAWN` tick; it does not post a signal to the Zombie task.
 - The game-over flow is split between two screens: `scr_game_zomwar` latches `gamescore.score_now`, plays `BUZZER_SOUND_GOODBYE`, and arms a one-shot `ZW_GAME_EXIT_GAME` timer; `scr_game_over` runs the ranking and writes the score to EEPROM only after the user presses Retry / Rank / Home.
