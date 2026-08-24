@@ -62,7 +62,9 @@ void zw_game_zombie_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < ZOMBIE_NUMBER; i++)
 		{
 			if (zombie[i].visible != WHITE)
+			{
 				continue;
+			}
 			alive++;
 			if (zombie[i].rising)
 			{
@@ -78,7 +80,9 @@ void zw_game_zombie_handle(ak_msg_t* msg)
 				}
 				zombie[i].action_image++;
 				if (zombie[i].action_image > 3)
+				{
 					zombie[i].action_image = 1;
+				}
 				continue;
 			}
 			if (zombie[i].x - zw_game_zombie_speed < -ZOMBIE_MIN_LEFT_OFFSET)
@@ -112,12 +116,16 @@ void zw_game_zombie_handle(ak_msg_t* msg)
 			zombie[i].y = (uint8_t)new_y;
 			zombie[i].action_image++;
 			if (zombie[i].action_image > 3)
+			{
 				zombie[i].action_image = 1;
+			}
 		}
 		for (uint8_t i = 0; i < ZOMBIE_NUMBER && alive < ZOMBIE_INIT_NUMBER; i++)
 		{
 			if (zombie[i].visible == WHITE)
+			{
 				continue; // slot in use
+			}
 			zw_game_zombie_spawn(i);
 			alive++;
 		}
@@ -130,15 +138,23 @@ void zw_game_zombie_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < ZOMBIE_NUMBER; i++)
 		{
 			if (zombie[i].visible != WHITE)
+			{
 				continue;
+			}
 			if (zombie[i].rising)
+			{
 				continue;
+			}
 			for (uint8_t j = 0; j < BULLET_NUMBER; j++)
 			{
 				if (bullet[j].visible != WHITE)
+				{
 					continue;
+				}
 				if (!zw_game_zombie_check_hit(j, i))
+				{
 					continue;
+				}
 				bullet[j].visible = BLACK;
 				bullet[j].x = 0;
 				zw_game_bang_spawn(zombie[i].x, zombie[i].y);
@@ -162,7 +178,9 @@ void zw_game_zombie_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < ZOMBIE_NUMBER && spawned < ZOMBIE_WAVE_SPAWN; i++)
 		{
 			if (zombie[i].visible == WHITE)
+			{
 				continue;
+			}
 			zw_game_zombie_spawn(i);
 			spawned++;
 		}
@@ -201,7 +219,9 @@ void zw_game_zombie_handle(ak_msg_t* msg)
 		zombie[0].visible = WHITE;
 		zombie[0].action_image++;
 		if (zombie[0].action_image > 3)
+		{
 			zombie[0].action_image = 1;
+		}
 		if (zombie[0].x < -ZOMBIE_SIZE_BITMAP_X)
 		{
 			zombie[0].x = LCD_WIDTH + 3;
@@ -210,9 +230,13 @@ void zw_game_zombie_handle(ak_msg_t* msg)
 		for (uint8_t j = 0; j < BULLET_NUMBER; j++)
 		{
 			if (bullet[j].visible != WHITE)
+			{
 				continue;
+			}
 			if (!zw_game_zombie_check_hit(j, 0))
+			{
 				continue;
+			}
 			bullet[j].visible = BLACK;
 			bullet[j].x = 0;
 			zw_game_bang_spawn(zombie[0].x, zombie[0].y);

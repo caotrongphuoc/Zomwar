@@ -32,7 +32,9 @@ void zw_game_border_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < ZOMBIE_NUMBER; i++)
 		{
 			if (zombie[i].visible != WHITE)
+			{
 				continue;
+			}
 			if (zombie[i].x <= -(int32_t)ZOMBIE_MIN_LEFT_OFFSET)
 			{
 				if (zw_game_car_find_nearest(zombie[i].y) < 0)
@@ -61,7 +63,9 @@ void zw_game_border_handle(ak_msg_t* msg)
 	{
 		APP_DBG_SIG("ZW_GAME_BORDER_LEVEL_UP\n");
 		if (!wave_warning_active)
+		{
 			break;
+		}
 		if (wave_warning_timer > 0)
 		{
 			wave_warning_timer--;

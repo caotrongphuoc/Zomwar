@@ -21,9 +21,13 @@ void zw_game_gunner_handle(ak_msg_t* msg)
 	{
 		APP_DBG_SIG("ZW_GAME_GUNNER_UP\n");
 		if (gunner.y <= GUNNER_AXIS_Y_MIN + GUNNER_STEP_AXIS_Y)
+		{
 			gunner.y = GUNNER_AXIS_Y_MIN;
+		}
 		else
+		{
 			gunner.y -= GUNNER_STEP_AXIS_Y;
+		}
 	}
 	break;
 

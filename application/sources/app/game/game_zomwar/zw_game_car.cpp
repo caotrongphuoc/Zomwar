@@ -11,10 +11,14 @@ int8_t zw_game_car_find_nearest(uint8_t zy)
 	for (uint8_t i = 0; i < CAR_LANE_NUMBER; i++)
 	{
 		if (!car[i].visible || car[i].running)
+		{
 			continue;
+		}
 		uint8_t dist = (zy > car[i].y) ? (zy - car[i].y) : (car[i].y - zy);
 		if (dist > CAR_HIT_RANGE_Y)
+		{
 			continue;
+		}
 		if (dist < best_dist)
 		{
 			best_dist = dist;
@@ -37,9 +41,13 @@ bool zw_game_car_check_hit(uint8_t c, uint8_t z)
 {
 	int16_t dy = (int16_t)zombie[z].y - (int16_t)car[c].y;
 	if (dy < 0)
+	{
 		dy = -dy;
+	}
 	if (dy > CAR_HIT_RANGE_Y)
+	{
 		return false;
+	}
 
 	int16_t car_left = car[c].x;
 	int16_t car_right = car_left + CAR_SIZE_BITMAP_X;
@@ -71,7 +79,9 @@ void zw_game_car_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < ZOMBIE_NUMBER; i++)
 		{
 			if (zombie[i].visible != WHITE)
+			{
 				continue;
+			}
 			if (zombie[i].x <= -(int32_t)ZOMBIE_MIN_LEFT_OFFSET)
 			{
 				int8_t m = zw_game_car_find_nearest(zombie[i].y);
@@ -96,11 +106,15 @@ void zw_game_car_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < CAR_LANE_NUMBER; i++)
 		{
 			if (!car[i].visible || !car[i].running)
+			{
 				continue;
+			}
 			car[i].x += CAR_SPEED;
 			car[i].action_image++;
 			if (car[i].action_image > 3)
+			{
 				car[i].action_image = 1;
+			}
 			if (car[i].x > LCD_WIDTH)
 			{
 				car[i].visible = false;
@@ -116,13 +130,19 @@ void zw_game_car_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < CAR_LANE_NUMBER; i++)
 		{
 			if (!car[i].visible || !car[i].running)
+			{
 				continue;
+			}
 			for (uint8_t j = 0; j < ZOMBIE_NUMBER; j++)
 			{
 				if (zombie[j].visible != WHITE)
+				{
 					continue;
+				}
 				if (!zw_game_car_check_hit(i, j))
+				{
 					continue;
+				}
 				zw_game_bang_spawn(zombie[j].x, zombie[j].y);
 				zw_game_score += 10;
 				BUZZER_PlaySound(BUZZER_SOUND_BANG);

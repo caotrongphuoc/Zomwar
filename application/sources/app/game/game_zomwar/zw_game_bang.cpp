@@ -16,7 +16,9 @@ void zw_game_bang_spawn(int16_t x, uint8_t y)
 	for (uint8_t i = 0; i < BANG_NUMBER; i++)
 	{
 		if (bang[i].visible == WHITE)
+		{
 			continue;
+		}
 		bang[i].visible = WHITE;
 		bang[i].x = (x + BANG_SPAWN_OFFSET_X > 0) ? (uint8_t)(x + BANG_SPAWN_OFFSET_X) : 0;
 		bang[i].y = (y >= BANG_SPAWN_OFFSET_Y) ? y - BANG_SPAWN_OFFSET_Y : 0;

@@ -29,7 +29,9 @@ void zw_game_bullet_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < BULLET_NUMBER; i++)
 		{
 			if (bullet[i].visible != WHITE)
+			{
 				continue;
+			}
 			bullet[i].x += BULLET_STEP_AXIS_X;
 			if (bullet[i].x >= BULLET_MAX_AXIS_X)
 			{
@@ -46,7 +48,9 @@ void zw_game_bullet_handle(ak_msg_t* msg)
 		for (uint8_t i = 0; i < BULLET_NUMBER; i++)
 		{
 			if (bullet[i].visible == WHITE)
+			{
 				continue;
+			}
 			bullet[i].visible = WHITE;
 			bullet[i].x = gunner.x + BULLET_SPAWN_OFFSET_X;
 			bullet[i].y = gunner.y - BULLET_SPAWN_OFFSET_Y;

@@ -37,11 +37,15 @@ void zw_game_tombstone_handle(ak_msg_t* msg)
 		tombstone_spawn_timer = TOMBSTONE_SPAWN_INTERVAL;
 		uint8_t tidx = (uint8_t)(rand() % TOMBSTONE_NUMBER);
 		if (!tombstone[tidx].active)
+		{
 			return;
+		}
 		for (uint8_t i = 0; i < ZOMBIE_NUMBER; i++)
 		{
 			if (zombie[i].visible == WHITE)
+			{
 				continue;
+			}
 			int16_t x = tombstone[tidx].x;
 			uint8_t y = lane_y[tombstone[tidx].lane] + TOMBSTONE_SIZE_BITMAP_Y;
 			zw_game_zombie_spawn_from_tombstone(i, x, y);
