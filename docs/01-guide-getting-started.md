@@ -73,10 +73,14 @@ From your `Home` directory, create a folder named **Workspace**. This will hold 
 
 Inside `Workspace`, create two subdirectories:
 
-| Directory | Purpose                                                                                       |
-| --------- | --------------------------------------------------------------------------------------------- |
-| `Sources` | Holds your programming projects                                                               |
+<div align="center">
+
+| Directory | Purpose |
+| :---: | :--- |
+| `Sources` | Holds your programming projects |
 | `Tools`   | Holds the programming tools (see details in [Section II](#ii-quick-start-guide-environment-setup)) |
+
+</div>
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_create_sources_and_tools_folders.png" />
