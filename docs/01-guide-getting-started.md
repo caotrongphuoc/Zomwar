@@ -43,7 +43,7 @@ You can also click the **Star** button next to **Fork** to support the author.
 > - Name the repository after **your game's name**.
 > - Add a brief description of your game in the **Description** field.
 
-Once the fork is created, GitHub redirects you to the new repository — this is the "skeleton" you will use to develop and complete your game:
+Once the fork is created, GitHub redirects you to the new repository. This is the "skeleton" you will use to develop and complete your game:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_repo_after_fork.png" />
@@ -55,7 +55,7 @@ Once the fork is created, GitHub redirects you to the new repository — this is
 
 To build the source code and flash firmware onto the kit, you need to set up the development environment on Ubuntu/Linux. Step-by-step instructions are available here:
 
-**[AK Embedded Base Kit STM32L151 — Getting Started](https://epcb.vn/blogs/ak-embedded-software/ak-embedded-base-kit-stm32l151-getting-started)**
+**[AK Embedded Base Kit STM32L151 - Getting Started](https://epcb.vn/blogs/ak-embedded-software/ak-embedded-base-kit-stm32l151-getting-started)**
 
 ---
 
@@ -65,7 +65,7 @@ To build the source code and flash firmware onto the kit, you need to set up the
 
 ### Step 1: Create your working directory
 
-From your `Home` directory, create a folder named **Workspace** — this will hold all of your source code and programming tools.
+From your `Home` directory, create a folder named **Workspace**. This will hold all of your source code and programming tools.
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_open_vscode_workspace.png" />
@@ -118,49 +118,49 @@ All game logic lives in the `application/sources/app` directory.
 
 #### Example: Displaying the Peashooter screen in the Plants vs. Zombies game
 
-**Step 3.1 —** Create a header file `scr_peashooter.h` in the `screens/` directory to declare the functions that draw the Peashooter screen:
+**Step 3.1.** Create a header file `scr_peashooter.h` in the `screens/` directory to declare the functions that draw the Peashooter screen:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_create_peashooter_header.png" />
 </p>
 
-**Step 3.2 —** Create `scr_peashooter.cpp` to handle the bitmap data and render the Peashooter on the display:
+**Step 3.2.** Create `scr_peashooter.cpp` to handle the bitmap data and render the Peashooter on the display:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_create_peashooter_source.png" />
 </p>
 
-**Step 3.3 —** Create a header file `screens_bitmap.h` in the `screens/` directory to declare shared bitmap data:
+**Step 3.3.** Create a header file `screens_bitmap.h` in the `screens/` directory to declare shared bitmap data:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_create_bitmap_header.png" />
 </p>
 
-**Step 3.4 —** Create `screens_bitmap.cpp` containing the Peashooter's bitmap data:
+**Step 3.4.** Create `screens_bitmap.cpp` containing the Peashooter's bitmap data:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_create_bitmap_source.png" />
 </p>
 
-**Step 3.5 —** Include the Peashooter header file in `task_display.h`:
+**Step 3.5.** Include the Peashooter header file in `task_display.h`:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_include_headers_in_task_display.png" />
 </p>
 
-**Step 3.6 —** Update the `AC_DISPLAY_BUTTON_MODE_RELEASED` case:
+**Step 3.6.** Update the `AC_DISPLAY_BUTTON_MODE_RELEASED` case:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_update_switch_case_in_task_display.png" />
 </p>
 
-**Step 3.7 —** Add the two files `scr_peashooter.cpp` and `screens_bitmap.cpp` to `Makefile.mk` inside the `screens/` directory so they get compiled:
+**Step 3.7.** Add the two files `scr_peashooter.cpp` and `screens_bitmap.cpp` to `Makefile.mk` inside the `screens/` directory so they get compiled:
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_add_bitmap_and_peashooter_to_project.png" />
 </p>
 
-**Step 3.8 —** Build and flash the firmware onto the kit (see detailed instructions in [Section II](#ii-quick-start-guide-environment-setup)):
+**Step 3.8.** Build and flash the firmware onto the kit (see detailed instructions in [Section II](#ii-quick-start-guide-environment-setup)):
 
 <p align="center">
   <img width="1338" height="640" alt="repo-ak" src="../resources/images/guide-getting-started/getting_started_final_result.jpg" />
