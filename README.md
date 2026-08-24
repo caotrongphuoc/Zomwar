@@ -26,17 +26,13 @@
 
 ## Documentation
 
-<div align="center">
-
 | File | Description |
-| :---: | :--- |
+| --- | --- |
 | [README.md](README.md) | Main project overview, hardware information, gameplay rules, and object descriptions. |
 | [docs/01-guide-getting-started.md](docs/01-guide-getting-started.md) | Game programming getting started guide. |
 | [docs/02-guide-coding-rules.md](docs/02-guide-coding-rules.md) | Some rules for coding game. |
 | [docs/03-design-sequence-object.md](docs/03-design-sequence-object.md) | Runtime sequence diagrams for gameplay objects: Gunner, Bullet, Zombie, Car, Bang, Tombstone, and Border. |
 | [docs/04-design-sequence-runtime.md](docs/04-design-sequence-runtime.md) | Runtime signal-processing flow for button input, AK task messages, timers, game-loop ticks, object updates, and Mermaid sequence diagrams. |
-
-</div>
 
 ## Introduction
 
