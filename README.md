@@ -36,12 +36,12 @@
 
 ## Introduction
 
-Zomwar is an action survival game built on top of the AK Embedded Base Kit — a hands-on platform for embedded programming enthusiasts to explore event-driven design in depth. While building and playing Zomwar, you put the following core concepts of modern embedded engineering into practice:
+Zomwar is an action survival game built on top of the AK Embedded Base Kit, a practical platform for embedded programming enthusiasts to explore event-driven design in depth. While building and playing Zomwar, you put the following core concepts of modern embedded engineering into practice:
 
 - **System design:** Modelling complex logic flows with UML.
 - **Process management:** Coordinating cooperative Tasks and scheduling them efficiently.
 - **Communication:** Using Signals, Timers, and Messages to react in real time.
-- **Control logic:** Building robust state machines for the player, the Zombies, and the overall match progression.
+- **Control logic:** Building state machines for the player, the Zombies, and the overall match progression.
 
 ### I. Hardware
 
@@ -54,7 +54,7 @@ Zomwar is an action survival game built on top of the AK Embedded Base Kit — a
 
 [AK Embedded Base Kit](https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu) is an evaluation kit aimed at intermediate and advanced embedded software learners.
 
-The kit integrates a **1.54" OLED LCD**, **3 push buttons**, and **a buzzer** capable of playing short melodies, giving you everything you need to study **event-driven systems** through hands-on game-machine design.
+The kit integrates a **1.54" OLED LCD**, **3 push buttons**, and **a buzzer** capable of playing short melodies, giving you everything you need to study **event-driven systems** through game-machine design.
 It also exposes **RS485**, the **Qwiic Connect System**, and **Grove** connectors, so it doubles as a convenient prototyping board for real-world embedded projects.
 
 **MCU Overview:**
@@ -128,8 +128,8 @@ The game opens on the **Main Menu**, which offers the following options:
 | <img src="resources/images/bitmap/bitmap_bullet.png" width="100"/> | **Bullet** | Bullet fired by the Gunner. Flies to the right and destroys any Zombie it touches. |
 | <img src="resources/images/bitmap/bitmap_zombie.gif" width="100"/> | **Zombie** | The main enemy. Walks left toward the Border with a slight zigzag motion along the Y axis, and gets faster after every wave. Each Zombie destroyed is worth **10 points**. |
 | <img src="resources/images/bitmap/bitmap_tombstone.png" width="100"/> | **Tombstone** | A static graveyard tile placed on the map (up to 2 per lane). While active, it periodically makes a new Zombie rise out of the grave into its lane. Which Tombstones are active can be configured in **Setting**. |
-| <img src="resources/images/bitmap/bitmap_car.gif" width="100"/> | **Car** | A defensive vehicle parked on the left edge of a lane. When a Zombie reaches the left edge (or rams the parked car), the nearest available Car switches on and drives right, crushing every Zombie in its lane before leaving the screen — single use. Which lanes start with a Car is configured in **Setting**. |
-| <img src="resources/images/bitmap/bitmap_bang.gif" width="100"/> | **Bang** | A short impact animation drawn wherever a Zombie is destroyed (by a Bullet or by a Car). Purely visual — it has no gameplay effect on its own. |
+| <img src="resources/images/bitmap/bitmap_car.gif" width="100"/> | **Car** | A defensive vehicle parked on the left edge of a lane. When a Zombie reaches the left edge (or rams the parked car), the nearest available Car switches on and drives right, crushing every Zombie in its lane before leaving the screen (single use). Which lanes start with a Car is configured in **Setting**. |
+| <img src="resources/images/bitmap/bitmap_bang.gif" width="100"/> | **Bang** | A short impact animation drawn wherever a Zombie is destroyed (by a Bullet or by a Car). Purely visual; it has no gameplay effect on its own. |
 | <img src="resources/images/bitmap/bitmap_border.png" height="100"/> | **Border** | The safe zone along the left edge that must be protected. The match ends the moment a Zombie crosses the Border in a lane that has no Car left. |
 
 > **Note:** For detailed object runtime sequences, see [Game Object Sequences](docs/03-design-sequence-object.md).
@@ -143,9 +143,9 @@ The game opens on the **Main Menu**, which offers the following options:
 
 #### Game Mechanics:
 
-- **Scoring:** Each Zombie destroyed — whether by a Bullet or by a Car — is worth **10 points**. The running score is shown in the bottom-right corner of the screen, and the total kill count in the bottom-left corner.
+- **Scoring:** Each Zombie destroyed (whether by a Bullet or by a Car) is worth **10 points**. The running score is shown in the bottom-right corner of the screen, and the total kill count in the bottom-left corner.
 - **Waves & difficulty:** Every **200 points**, a warning blinks on screen, a fresh batch of Zombies is spawned, and the Zombie movement speed goes up by one level (capped at level 6). The starting speed can be customised in the **Setting** menu.
-- **Cars as a second line of defence:** A Car parked on a lane stays still until a Zombie reaches the left edge of that lane (or runs into the Car). It then drives across the lane once, crushes every Zombie in its path, and exits the screen — meaning each Car can only save the lane one time. Use **Setting** to choose which lanes start with a Car.
+- **Cars as a second line of defence:** A Car parked on a lane stays still until a Zombie reaches the left edge of that lane (or runs into the Car). It then drives across the lane once, crushes every Zombie in its path, and exits the screen, so each Car can only save the lane one time. Use **Setting** to choose which lanes start with a Car.
 - **Tombstones as Zombie spawners:** Tombstones sit at fixed positions on the map; every active Tombstone occasionally lifts a new Zombie out of the grave into its lane. Toggle individual Tombstones on or off in **Setting**.
 - **Animation:** To keep the action lively, the Gunner, the Zombies, and the Cars all play sprite animations while they move.
 - **Game Over:** When a Zombie crosses the Border in an undefended lane, the match ends, the objects reset, and the score is saved. A short **"RIP"** screen plays before the **Game Over** screen, which offers 3 options:
@@ -153,7 +153,7 @@ The game opens on the **Main Menu**, which offers the following options:
     - **Rank:** view the leaderboard.
     - **Home:** return to the main menu.
 
-> **Note:** In the latest game version, a "RIP" screen plays before the Game Over screen — try to score as many points and survive as long as possible to earn praise.
+> **Note:** In the latest game version, a "RIP" screen plays before the Game Over screen. Try to score as many points and survive as long as possible to earn praise.
 
 <table align="center">
   <tr>
