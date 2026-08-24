@@ -77,6 +77,8 @@ Flash Partitions Layout
 
 **MCU Naming Convention:**
 
+<div align="center">
+
 | Part | Meaning |
 |---|---|
 | `STM32` | STMicroelectronics 32-bit MCU family. |
@@ -87,6 +89,7 @@ Flash Partitions Layout
 | `T` | LQFP package. |
 | `6` | Industrial temperature grade. |
 
+</div>
 
 <table align="center">
   <tr>
