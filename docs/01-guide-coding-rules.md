@@ -35,7 +35,7 @@ The conventions below are drawn directly from the existing source code. You can 
 |---|---|---|---|
 | `lower_snake_case` | Lowercase letters, words separated by underscore `_` | `wave_warning_active`, `zw_game_score` | Variables, functions, typedefs, source file names, folder names |
 | `UPPER_SNAKE_CASE` | Uppercase letters, words separated by underscore `_` | `BULLET_NUMBER`, `ZW_GAME_BORDER_SETUP`, `AC_TASK_DISPLAY_ID` | `#define` constants, signal enums, task IDs, macros |
-| `kebab-case` | Lowercase letters, words separated by hyphen `-` | `02-guide-coding-rules.md` | Documentation file names under `docs/` |
+| `kebab-case` | Lowercase letters, words separated by hyphen `-` | `01-guide-coding-rules.md` | Documentation file names under `docs/` |
 
 ### 1. Folder
 
@@ -509,10 +509,10 @@ Example of files currently in the repo:
 
 ```
 docs/
-├── 01-guide-getting-started.md
-├── 02-guide-coding-rules.md
-├── 03-design-sequence-object.md
-└── 04-design-sequence-runtime.md
+├── 00-guide-getting-started.md
+├── 01-guide-coding-rules.md
+├── 02-design-sequence-object.md
+└── 03-design-sequence-runtime.md
 ```
 
 A few important notes:

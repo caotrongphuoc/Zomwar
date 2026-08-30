@@ -29,10 +29,10 @@
 | File | Description |
 | --- | --- |
 | [README.md](README.md) | Main project overview, hardware information, gameplay rules, and object descriptions. |
-| [docs/01-guide-getting-started.md](docs/01-guide-getting-started.md) | Game programming getting started guide. |
-| [docs/02-guide-coding-rules.md](docs/02-guide-coding-rules.md) | Some rules for coding game. |
-| [docs/03-design-sequence-object.md](docs/03-design-sequence-object.md) | Runtime sequence diagrams for gameplay objects: Gunner, Bullet, Zombie, Car, Bang, Tombstone, and Border. |
-| [docs/04-design-sequence-runtime.md](docs/04-design-sequence-runtime.md) | Runtime signal-processing flow for button input, AK task messages, timers, game-loop ticks, object updates, and Mermaid sequence diagrams. |
+| [docs/00-guide-getting-started.md](docs/00-guide-getting-started.md) | Game programming getting started guide. |
+| [docs/01-guide-coding-rules.md](docs/01-guide-coding-rules.md) | Some rules for coding game. |
+| [docs/02-design-sequence-object.md](docs/02-design-sequence-object.md) | Runtime sequence diagrams for gameplay objects: Gunner, Bullet, Zombie, Car, Bang, Tombstone, and Border. |
+| [docs/03-design-sequence-runtime.md](docs/03-design-sequence-runtime.md) | Runtime signal-processing flow for button input, AK task messages, timers, game-loop ticks, object updates, and Mermaid sequence diagrams. |
 
 ## Introduction
 
@@ -174,7 +174,7 @@ The game opens on the **Main Menu**, which offers the following options:
 </table>
 </div>
 
-> **Note:** For detailed object runtime sequences, see [Game Object Sequences](docs/03-design-sequence-object.md).
+> **Note:** For detailed object runtime sequences, see [Game Object Sequences](docs/02-design-sequence-object.md).
 
 ### III. How to Play:
 
@@ -213,7 +213,7 @@ The game opens on the **Main Menu**, which offers the following options:
 
 ### IV. Basic Game Sequence Logic
 
-> **Note:** For a more detailed sequence flow, see [Runtime Signal Processing](docs/04-design-sequence-runtime.md).
+> **Note:** For a more detailed sequence flow, see [Runtime Signal Processing](docs/03-design-sequence-runtime.md).
 
 <table align="center">
   <tr>
