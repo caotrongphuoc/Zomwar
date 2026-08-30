@@ -13,7 +13,7 @@
 
 # Zomwar - Game built on AK Embedded Base Kit
 
-<center><img width="1280" height="640" alt="Zomwar" src="resources/images/screens/banner_game_zomwar_v2_2x1.gif" />
+<center><img width="1280" height="640" alt="Zomwar" src="resources/images/screens/banner_game_zomwar_v2_1x1.gif" />
 </center>
 
 <hr>
