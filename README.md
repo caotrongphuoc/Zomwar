@@ -13,7 +13,7 @@
 
 # Zomwar - Game built on AK Embedded Base Kit
 
-<center><img width="1280" height="640" alt="Zomwar" src="resources/images/screens/banner_game_zomwar_ver2.gif" />
+<center><img width="1280" height="640" alt="Zomwar" src="resources/images/screens/banner_game_zomwar_v2_2x1.gif" />
 </center>
 
 <hr>
@@ -104,7 +104,7 @@ The following section describes the gameplay and core mechanics of **"Zomwar"**.
 
 <table align="center">
   <tr>
-    <td align="center"><img src="resources/images/screens/scr_game_menu_x10.gif" alt="Game menu" width="480"/></td>
+    <td align="center"><img src="resources/images/screens/scr_game_menu.gif" alt="Game menu" width="480"/></td>
   </tr>
 </table>
 <p align="center"><strong><em>Figure 3:</em></strong> Menu screen</p>
@@ -199,14 +199,14 @@ The game opens on the **Main Menu**, which offers the following options:
 
 <table align="center">
   <tr>
-    <td align="center"><img src="resources/images/screens/scr_game_over_1_x10.png" alt="zomwar game over screen 1" width="480"/></td>
+    <td align="center"><img src="resources/images/screens/scr_game_over_1st.png" alt="zomwar game over screen 1" width="480"/></td>
   </tr>
 </table>
 <p align="center"><strong><em>Figure 5:</em></strong> Game Over screen 1</p>
 
 <table align="center">
   <tr>
-    <td align="center"><img src="resources/images/screens/scr_game_over_2_x10.png" alt="zomwar game over screen 2" width="480"/></td>
+    <td align="center"><img src="resources/images/screens/scr_game_over_2nd.png" alt="zomwar game over screen 2" width="480"/></td>
   </tr>
 </table>
 <p align="center"><strong><em>Figure 6:</em></strong> Game Over screen 2</p>
